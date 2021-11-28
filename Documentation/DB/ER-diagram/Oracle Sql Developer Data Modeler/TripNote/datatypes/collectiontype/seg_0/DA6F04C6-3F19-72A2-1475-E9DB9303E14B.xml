@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<CollectionType class="oracle.dbtools.crest.model.design.datatypes.CollectionType" name="collection_places" directorySegmentName="seg_0" id="DA6F04C6-3F19-72A2-1475-E9DB9303E14B">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 14:03:36 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<predefined>false</predefined>
+<dataTypeDescr class="oracle.dbtools.crest.model.design.datatypes.CollectionType$DataTypeWrapper">
+<size></size>
+<type>DOM3000004</type>
+<isreference>false</isreference>
+</dataTypeDescr>
+<maxElement>1</maxElement>
+<type>COLLECTION</type>
+</CollectionType>

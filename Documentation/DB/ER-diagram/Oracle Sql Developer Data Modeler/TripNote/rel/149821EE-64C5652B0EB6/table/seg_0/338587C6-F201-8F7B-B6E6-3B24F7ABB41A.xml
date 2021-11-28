@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="338587C6-F201-8F7B-B6E6-3B24F7ABB41A" name="Trip">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>21714479-6F5E-6854-785B-903334391D09</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="User_user_id" id="D3E76FC2-F357-206C-2F94-86F9D8DC8DBE">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>1CA81D75-5C6F-AE50-D2BF-CE8EF050C387</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DDF80744-DF96-A8FB-0A85-19B82BB6CA3E" referredColumn="3089EAD4-AED9-06DF-926D-412736A1748A"/>
+</associations>
+</Column>
+<Column name="category" id="0BE4B8B7-76C9-7C09-E85D-6E6683AE3E56">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>125C4533-2898-C367-202C-7E697306F992</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="place" id="08391E9E-58D9-3D8C-FD8D-88AF3325C63D">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 14:06:34 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>4</use>
+<collectionType>DA6F04C6-3F19-72A2-1475-E9DB9303E14B</collectionType>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date" id="45801A34-9112-C667-94FB-D078C8C59163">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>619C4265-BDA0-3E68-9B23-2713B6441483</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="distance" id="5A8F8302-FEC4-B696-378D-37AE4D13BEF8">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>BEE4E543-1808-1A34-B5D3-C350E9533334</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="time" id="0570B403-B142-9787-2551-595F6308B61A">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>57F7AC5B-7A1F-ABDF-DC48-D62006E8B7FE</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="notes" id="F47A33F8-B9C5-61B5-CB48-54D2511E8B90">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>DCAFB4F9-2022-7FEF-1CC6-8EE1A7ADCB39</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pictures" id="A8E26787-BEBE-B30D-4E28-2EAC5CB9FC80">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>16C935B4-A1B2-F779-C6B4-6CE8F4DAF389</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gpx" id="94603F3D-199A-5B1D-8BC2-C834F5CDDFA3">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>6E7621B7-B103-4032-688A-FCD3A6D543C8</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D624BD84-FA5C-5C65-1663-677272D7256B" name="Trip_User_FK">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>08182380-F8F7-429A-D91A-A8983D5FB4C9</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D3E76FC2-F357-206C-2F94-86F9D8DC8DBE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

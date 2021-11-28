@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="960387E9-6F92-7E60-2221-96C7EB6F39B0" name="User">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>1DA69AF1-7863-1325-2ADF-357629D8620D</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="user_id" id="3089EAD4-AED9-06DF-926D-412736A1748A">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>6608959F-1A34-E252-A7E0-139ED29C216D</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="F7C9244F-00F1-3FDE-42EE-1A199FD0E4F6">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>F9CF244A-F095-36C2-BA3A-301EB72613B9</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="surname" id="5EBABA9E-F7CC-D2C6-A508-3FE60C708EC9">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>6D09C91B-96F8-7BC6-3431-84C2AB250F2B</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="birth_date" id="90C09190-B7E1-263C-821C-8F1037AB34EE">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>0ECD5EA5-A388-DCDF-A0AD-4763E1E429FC</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="FDA202CE-2EFF-D91B-6080-FE937B27A335">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>6F89C2D0-2AD7-6281-6DB5-73357BD78960</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>35</dataTypeSize>
+<ownDataTypeParameters>35,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telephone_number" id="474C64D5-ABB6-6AC7-EAAC-002621BB4010">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>F68D9D5A-EE09-80B2-6706-A4C140CE9F8A</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<ownDataTypeParameters>13,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password" id="0C836450-9034-EF26-647D-92F776E75D9D">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>90AE9102-020E-147E-1374-76E191C09030</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="profile_picture" id="43B8E866-278D-CB2D-A26D-E2DEC4F6B53A">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>CDE8FE07-0024-3BDA-6ADC-59326CA59463</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT010</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E2477EFB-0938-FA84-24F6-22C3D0D04C40" name="User_PK">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:47:23 UTC</createdTime>
+<generatorID>E3AA32FD-9531-3475-4278-777452E8015D</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3089EAD4-AED9-06DF-926D-412736A1748A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

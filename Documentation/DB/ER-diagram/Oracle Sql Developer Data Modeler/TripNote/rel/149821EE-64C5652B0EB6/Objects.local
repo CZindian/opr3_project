@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="338587C6-F201-8F7B-B6E6-3B24F7ABB41A" name="Trip" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="149821EE-C79D-8C79-FCA3-64C5652B0EB6" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="960387E9-6F92-7E60-2221-96C7EB6F39B0" name="User" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="149821EE-C79D-8C79-FCA3-64C5652B0EB6" propertySourceId="" propertyTargetId=""/>
+   <object objectType="FKIndexAssociation" objectID="DDF80744-DF96-A8FB-0A85-19B82BB6CA3E" name="Trip_User_FK" containerID="338587C6-F201-8F7B-B6E6-3B24F7ABB41A" refContainerID="960387E9-6F92-7E60-2221-96C7EB6F39B0" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" propertyParentId="149821EE-C79D-8C79-FCA3-64C5652B0EB6" propertySourceId="960387E9-6F92-7E60-2221-96C7EB6F39B0" propertyTargetId="338587C6-F201-8F7B-B6E6-3B24F7ABB41A"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

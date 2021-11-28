@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="user_trip" directorySegmentName="seg_0" id="08182380-F8F7-429A-D91A-A8983D5FB4C9">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:40:04 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<sourcePk>E3AA32FD-9531-3475-4278-777452E8015D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1DA69AF1-7863-1325-2ADF-357629D8620D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>21714479-6F5E-6854-785B-903334391D09</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

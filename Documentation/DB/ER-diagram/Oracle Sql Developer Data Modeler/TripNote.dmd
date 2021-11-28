@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="TripNote" id="D9E43C18-4DCA-7497-5680-3587C1C5F524" version="3.5">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:10:45 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>D9E43C18-4DCA-7497-5680-3587C1C5F524</designId>
+</OSDM_Design>

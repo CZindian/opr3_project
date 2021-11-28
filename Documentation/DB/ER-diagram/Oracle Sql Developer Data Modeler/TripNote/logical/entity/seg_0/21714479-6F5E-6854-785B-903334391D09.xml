@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="21714479-6F5E-6854-785B-903334391D09" name="Trip">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:24:02 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="user_id" id="1CA81D75-5C6F-AE50-D2BF-CE8EF050C387">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:40:04 UTC</createdTime>
+<generatorID>08182380-F8F7-429A-D91A-A8983D5FB4C9</generatorID>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<referedAttribute>6608959F-1A34-E252-A7E0-139ED29C216D</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="category" id="125C4533-2898-C367-202C-7E697306F992">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:25:46 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="places_names" id="7ED0404D-DF17-589F-C05C-640EE76D49AB">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:24:08 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="places_addresses" id="7EB8F711-4B8F-E380-C1CB-56B0007B4AB3">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:27:36 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date" id="619C4265-BDA0-3E68-9B23-2713B6441483">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:30:17 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="distance" id="BEE4E543-1808-1A34-B5D3-C350E9533334">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:28:54 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="time" id="57F7AC5B-7A1F-ABDF-DC48-D62006E8B7FE">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:29:38 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="notes" id="DCAFB4F9-2022-7FEF-1CC6-8EE1A7ADCB39">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:24:44 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pictures" id="16C935B4-A1B2-F779-C6B4-6CE8F4DAF389">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:27:08 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gpx" id="6E7621B7-B103-4032-688A-FCD3A6D543C8">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:45:05 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

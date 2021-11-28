@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1DA69AF1-7863-1325-2ADF-357629D8620D" name="User">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:21:40 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="user_id" id="6608959F-1A34-E252-A7E0-139ED29C216D">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:39:07 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="F9CF244A-F095-36C2-BA3A-301EB72613B9">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:22:04 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="surname" id="6D09C91B-96F8-7BC6-3431-84C2AB250F2B">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:22:07 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="birth_date" id="0ECD5EA5-A388-DCDF-A0AD-4763E1E429FC">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:35:19 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="6F89C2D0-2AD7-6281-6DB5-73357BD78960">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:31:31 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telephone_number" id="F68D9D5A-EE09-80B2-6706-A4C140CE9F8A">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:38:39 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="password" id="90AE9102-020E-147E-1374-76E191C09030">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:36:45 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="profile_picture" id="CDE8FE07-0024-3BDA-6ADC-59326CA59463">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:35:58 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E3AA32FD-9531-3475-4278-777452E8015D" name="User PK">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:32:56 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<engineerTo>
+<item key="149821EE-C79D-8C79-FCA3-64C5652B0EB6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6608959F-1A34-E252-A7E0-139ED29C216D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

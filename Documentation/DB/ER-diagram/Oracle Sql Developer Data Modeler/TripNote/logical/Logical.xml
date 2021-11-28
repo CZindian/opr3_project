@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="1550E1AE-1943-0580-C873-1815164B2876" mainViewID="EF5F358F-7D55-588D-8A4F-ECEB581156D3">
+<createdBy>domin</createdBy>
+<createdTime>2021-10-31 13:10:45 UTC</createdTime>
+<ownerDesignName>TripNote</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>
