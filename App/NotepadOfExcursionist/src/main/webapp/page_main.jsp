@@ -21,7 +21,7 @@
 </nav>
 
 <main>
-    <jsp:include page="main_notes_view.jsp"/>
+    <jsp:include page="main_notes_content.jsp"/>
 </main>
 
 
