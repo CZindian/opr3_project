@@ -21,7 +21,7 @@
 </nav>
 
 <main>
-    <jsp:include page="add_note.jsp"/>
+    <jsp:include page="new_note_add_note.jsp"/>
 </main>
 
 

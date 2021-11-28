@@ -1,3 +1,3 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<jsp:include page="new_note.jsp"/>
+<jsp:include page="page_new_note.jsp"/>

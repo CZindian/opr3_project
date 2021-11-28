@@ -16,7 +16,7 @@
 <body>
 
 <nav>
-    <jsp:include page="add_trip_btn.jsp"/>
+    <jsp:include page="new_note_add_btn.jsp"/>
     <jsp:include page="main_navigation.jsp"/>
 </nav>
 
