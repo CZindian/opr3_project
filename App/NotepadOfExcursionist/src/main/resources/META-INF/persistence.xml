@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             version="2.0">
+    <persistence-unit name="userPU">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>cz.osu.opr3.project.notepadofexcursionist.db.entity.UserEntity</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/excursionist_note" />
+            <property name="javax.persistence.jdbc.user" value="admin" />
+            <property name="javax.persistence.jdbc.password" value="admin" />
+        </properties>
+    </persistence-unit>
+
+</persistence>
