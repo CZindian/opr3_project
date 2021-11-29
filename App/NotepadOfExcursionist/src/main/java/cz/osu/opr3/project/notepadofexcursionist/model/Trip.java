@@ -1,11 +1,11 @@
-package cz.osu.opr3.project.notepadofexcursionist;
+package cz.osu.opr3.project.notepadofexcursionist.model;
 
-import java.util.Base64;
 import java.util.List;
 
 public class Trip {
 
     private int userId;
+    private String title;
     private Category category;
     private String date;
     private String time;
@@ -15,12 +15,13 @@ public class Trip {
     private List<String> places;
     private List<String> pictures;
 
-    public Trip(int userId, Category category, String date,
+    public Trip(int userId, String title, Category category, String date,
                 String time, double distance, String gpxData,
                 String notes, List<String> places,
                 List<String> pictures) {
 
         this.userId = userId;
+        this.title = title;
         this.category = category;
         this.date = date;
         this.time = time;
@@ -33,6 +34,10 @@ public class Trip {
 
     public int getUserId() {
         return userId;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public Category getCategory() {

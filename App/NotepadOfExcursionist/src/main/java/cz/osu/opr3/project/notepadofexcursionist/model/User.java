@@ -1,4 +1,4 @@
-package cz.osu.opr3.project.notepadofexcursionist;
+package cz.osu.opr3.project.notepadofexcursionist.model;
 
 import java.util.Base64;
 
