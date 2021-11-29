@@ -6,7 +6,7 @@ import cz.osu.opr3.project.notepadofexcursionist.model.User;
 import java.util.List;
 import java.util.Map;
 
-public class NotesService {
+public class NotepadService {
 
     private static boolean isClientLoggedIn = false;
     private Map<User, List<Trip>> userNotesMap;
