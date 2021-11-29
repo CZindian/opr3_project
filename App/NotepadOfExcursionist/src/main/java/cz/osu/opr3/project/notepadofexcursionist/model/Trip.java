@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Trip {
 
+    private int tripID;
     private int userId;
     private String title;
     private Category category;
@@ -15,11 +16,12 @@ public class Trip {
     private List<String> places;
     private List<String> pictures;
 
-    public Trip(int userId, String title, Category category, String date,
+    public Trip(int tripID, int userId, String title, Category category, String date,
                 String time, double distance, String gpxData,
                 String notes, List<String> places,
                 List<String> pictures) {
 
+        this.tripID = tripID;
         this.userId = userId;
         this.title = title;
         this.category = category;
@@ -30,6 +32,10 @@ public class Trip {
         this.notes = notes;
         this.places = places;
         this.pictures = pictures;
+    }
+
+    public int getTripID() {
+        return tripID;
     }
 
     public int getUserId() {
@@ -71,4 +77,5 @@ public class Trip {
     public List<String> getPictures() {
         return pictures;
     }
+
 }

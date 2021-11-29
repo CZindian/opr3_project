@@ -1,7 +1,5 @@
 package cz.osu.opr3.project.notepadofexcursionist.model;
 
-import java.util.Base64;
-
 public class User {
 
     private int id;
@@ -13,15 +11,17 @@ public class User {
     private String birthDate;
     private String telephoneNumber;
 
-    public User(){
-        this.id = 1;
-        this.profilePicture = getBase64StringExample();
-        this.name = "Marek";
-        this.surname = "Janů";
-        this.email = "marek.janu@post.cz";
-        this.password = "encode";
-        this.birthDate = "12.1.2000";
-        this.telephoneNumber = "+420768346897";
+    public User(int id, String profilePicture, String name, String surname,
+                String email, String password, String birthDate, String telephoneNumber) {
+
+        this.id = id;
+        this.profilePicture = profilePicture;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.password = password;
+        this.birthDate = birthDate;
+        this.telephoneNumber = telephoneNumber;
     }
 
     public int getId() {
