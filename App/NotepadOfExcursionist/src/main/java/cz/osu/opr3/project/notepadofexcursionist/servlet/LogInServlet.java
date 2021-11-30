@@ -4,6 +4,7 @@ import java.util.List;
 
 import cz.osu.opr3.project.notepadofexcursionist.db.entity.TripEntity;
 import cz.osu.opr3.project.notepadofexcursionist.db.entity.UserEntity;
+import cz.osu.opr3.project.notepadofexcursionist.model.CurrentUser;
 import cz.osu.opr3.project.notepadofexcursionist.service.DBService;
 import cz.osu.opr3.project.notepadofexcursionist.service.NotepadManager;
 
@@ -11,8 +12,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 import static cz.osu.opr3.project.notepadofexcursionist.Constants.EMAIL;
 import static cz.osu.opr3.project.notepadofexcursionist.Constants.PASSWORD;
@@ -30,10 +29,7 @@ public class LogInServlet extends HttpServlet {
         try {
             UserEntity userEntity = DBService.getCurrentUserEntity(request.getParameter(EMAIL), request.getParameter(PASSWORD));
             List<TripEntity> trips = null;
-            Map<UserEntity, List<TripEntity>> currentUserData = new HashMap<>();
-            //TODO trips!!!
-            currentUserData.put(userEntity, trips);
-            NotepadManager.setCurrentUserData(currentUserData);
+            new CurrentUser(userEntity, trips);
             NotepadManager.setIsClientLoggedIn(true);
 
             response.sendRedirect("page_main.jsp");
