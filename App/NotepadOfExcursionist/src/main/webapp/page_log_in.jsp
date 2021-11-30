@@ -1,8 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
     <meta charset="UTF-8"/>
     <meta name="keywords" content=""/>
@@ -15,13 +13,11 @@
 </head>
 <body>
 <div class="centralizing_div">
-    <div class="log_in_div">
 
+    <div class="log_in_div">
         <span>
             <h1>Přihlášení</h1>
         </span>
-
-
         <form action="LogInServlet" method="post">
             <span>
                 <label for="email">Email</label>
@@ -33,9 +29,8 @@
             </span>
             <input type="submit" value="Přihlásit se">
         </form>
-
     </div>
+
 </div>
 </body>
-
 </html>

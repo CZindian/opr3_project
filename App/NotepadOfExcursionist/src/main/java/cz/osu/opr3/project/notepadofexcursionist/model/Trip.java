@@ -7,7 +7,7 @@ public class Trip {
     private int tripID;
     private int userId;
     private String title;
-    private Category category;
+    private String category;
     private String date;
     private String time;
     private double distance;
@@ -16,7 +16,7 @@ public class Trip {
     private List<String> places;
     private List<String> pictures;
 
-    public Trip(int tripID, int userId, String title, Category category, String date,
+    public Trip(int tripID, int userId, String title, String category, String date,
                 String time, double distance, String gpxData,
                 String notes, List<String> places,
                 List<String> pictures) {
@@ -46,7 +46,7 @@ public class Trip {
         return title;
     }
 
-    public Category getCategory() {
+    public String getCategory() {
         return category;
     }
 
