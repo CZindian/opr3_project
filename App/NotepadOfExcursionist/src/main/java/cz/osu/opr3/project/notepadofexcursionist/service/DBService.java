@@ -2,8 +2,8 @@ package cz.osu.opr3.project.notepadofexcursionist.service;
 
 import java.util.List;
 
-import cz.osu.opr3.project.notepadofexcursionist.db.entity.UserEntity;
-import cz.osu.opr3.project.notepadofexcursionist.db.repository.UserDBRepository;
+import cz.osu.opr3.project.notepadofexcursionist.repository.entity.UserEntity;
+import cz.osu.opr3.project.notepadofexcursionist.repository.UserDBRepository;
 
 public class DBService {
 

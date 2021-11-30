@@ -2,8 +2,8 @@ package cz.osu.opr3.project.notepadofexcursionist.servlet;
 
 import java.util.List;
 
-import cz.osu.opr3.project.notepadofexcursionist.db.entity.TripEntity;
-import cz.osu.opr3.project.notepadofexcursionist.db.entity.UserEntity;
+import cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity;
+import cz.osu.opr3.project.notepadofexcursionist.repository.entity.UserEntity;
 import cz.osu.opr3.project.notepadofexcursionist.service.CurrentUserManager;
 import cz.osu.opr3.project.notepadofexcursionist.service.DBService;
 

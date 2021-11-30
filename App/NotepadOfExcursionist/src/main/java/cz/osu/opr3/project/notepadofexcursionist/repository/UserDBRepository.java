@@ -1,9 +1,7 @@
-package cz.osu.opr3.project.notepadofexcursionist.db.repository;
+package cz.osu.opr3.project.notepadofexcursionist.repository;
 
 import cz.osu.opr3.project.notepadofexcursionist.Constants;
-import cz.osu.opr3.project.notepadofexcursionist.db.DBException;
-import cz.osu.opr3.project.notepadofexcursionist.db.entity.UserEntity;
-import cz.osu.opr3.project.notepadofexcursionist.model.User;
+import cz.osu.opr3.project.notepadofexcursionist.repository.entity.UserEntity;
 
 import javax.persistence.*;
 import java.util.ArrayList;

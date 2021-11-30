@@ -1,8 +1,7 @@
-package cz.osu.opr3.project.notepadofexcursionist.db.entity;
+package cz.osu.opr3.project.notepadofexcursionist.repository.entity;
 
 import java.util.List;
 
-import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
