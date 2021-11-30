@@ -17,8 +17,8 @@ public class TripEntity {
     @Column(name = "TRIP_ID")
     private int tripID;
 
-    @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="userId")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "userId")
     private UserEntity userEntity;
 
     @Basic
@@ -27,7 +27,7 @@ public class TripEntity {
 
     @Basic
     @Column(name = "TRIP_CATEGORY")
-    private Category tripCategory;
+    private String tripCategory;
 
     @Basic
     @Column(name = "TRIP_DATE")
@@ -39,7 +39,7 @@ public class TripEntity {
 
     @Basic
     @Column(name = "TRIP_DISTANCE")
-    private double tripDistance;
+    private String tripDistance;
 
     @Basic
     @Column(name = "TRIP_GPX_DATA")
@@ -57,4 +57,22 @@ public class TripEntity {
     @Column(name = "TRIP_PICTURES")
     private String tripPictures;
 
+    public TripEntity() {
+    }
+
+    public TripEntity(UserEntity userEntity, String tripTitle, String tripCategory,
+                      String tripDate, String tripTime, String tripDistance, String tripGpxData,
+                      String tripNotes, String tripPlaces, String tripPictures) {
+
+        this.userEntity = userEntity;
+        this.tripTitle = tripTitle;
+        this.tripCategory = tripCategory;
+        this.tripDate = tripDate;
+        this.tripTime = tripTime;
+        this.tripDistance = tripDistance;
+        this.tripGpxData = tripGpxData;
+        this.tripNotes = tripNotes;
+        this.tripPlaces = tripPlaces;
+        this.tripPictures = tripPictures;
+    }
 }

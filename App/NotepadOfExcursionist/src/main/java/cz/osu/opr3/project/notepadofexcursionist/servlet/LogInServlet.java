@@ -1,8 +1,5 @@
 package cz.osu.opr3.project.notepadofexcursionist.servlet;
 
-import java.util.List;
-
-import cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity;
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.UserEntity;
 import cz.osu.opr3.project.notepadofexcursionist.service.CurrentUserManager;
 import cz.osu.opr3.project.notepadofexcursionist.service.DBService;
@@ -27,8 +24,7 @@ public class LogInServlet extends HttpServlet {
 
         try {
             UserEntity userEntity = DBService.getCurrentUserEntity(request.getParameter(EMAIL), request.getParameter(PASSWORD));
-            List<TripEntity> trips = null;
-            CurrentUserManager.initialize(userEntity, trips);
+            CurrentUserManager.initialize(userEntity);
 
             response.sendRedirect("page_main.jsp");
         } catch (Exception e) {

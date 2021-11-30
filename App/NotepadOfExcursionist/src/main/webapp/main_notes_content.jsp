@@ -6,7 +6,7 @@
 
 <c:if test="<%=CurrentUserManager.hasTrips()%>">
     <%
-        List<TripEntity> trips = CurrentUserManager.getCurrentUserTrips();
+        List<TripEntity> trips = CurrentUserManager.getCurrentUserDada().getTrips();
         for (int i = 0; i < trips.size(); i++) {%>
     <div class="trip_div">
         <div class="trip_heading_div">

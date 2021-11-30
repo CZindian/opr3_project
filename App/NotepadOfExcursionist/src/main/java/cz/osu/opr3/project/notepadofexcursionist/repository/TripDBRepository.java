@@ -9,23 +9,22 @@ import javax.persistence.Persistence;
 
 public class TripDBRepository {
 
-    private static EntityManager entityManager = null;
-    private static EntityManagerFactory entityManagerFactory = null;
+    private static EntityManager entityManager;
+    private static EntityManagerFactory entityManagerFactory;
 
     private void initialize() {
-        if (entityManagerFactory == null)
-            try {
-                entityManagerFactory = Persistence.createEntityManagerFactory(Constants.PERSISTENCE_NAME);
-            } catch (Exception e) {
-                throw new DBException("Failed to create entity manager factory!", e);
-            }
 
-        if (entityManager == null)
-            try {
-                entityManager = entityManagerFactory.createEntityManager();
-            } catch (Exception e) {
-                throw new DBException("Failed to create entity manager!", e);
-            }
+        try {
+            entityManagerFactory = Persistence.createEntityManagerFactory(Constants.PERSISTENCE_NAME);
+        } catch (Exception e) {
+            throw new DBException("Failed to create entity manager factory!", e);
+        }
+
+        try {
+            entityManager = entityManagerFactory.createEntityManager();
+        } catch (Exception e) {
+            throw new DBException("Failed to create entity manager!", e);
+        }
 
     }
 

@@ -14,7 +14,6 @@ public class CurrentUserManager {
     private static boolean isClientLoggedIn = false;
 
     private static UserEntity currentUserDada;
-    private static List<TripEntity> currentUserTrips;
 
     public static UserEntity getCurrentUserDada() {
         return currentUserDada;
@@ -24,18 +23,14 @@ public class CurrentUserManager {
         CurrentUserManager.currentUserDada = currentUserDada;
     }
 
-    public static List<TripEntity> getCurrentUserTrips() {
-        return currentUserTrips;
-    }
-
-    public static void setCurrentUserTrips(List<TripEntity> currentUserTrips) {
-        CurrentUserManager.currentUserTrips = currentUserTrips;
-    }
-
-    public static void initialize(UserEntity currentUserData, List<TripEntity> currentUserTrips) {
+    public static void initialize(UserEntity currentUserData) {
         CurrentUserManager.currentUserDada = currentUserData;
-        CurrentUserManager.currentUserTrips = currentUserTrips;
         isClientLoggedIn = true;
+
+    }
+
+    public static void update(UserEntity currentUserData) {
+        CurrentUserManager.currentUserDada = currentUserData;
 
     }
 
@@ -68,7 +63,9 @@ public class CurrentUserManager {
     public static boolean hasTrips() {
         if (currentUserDada == null)
             throw new NullPointerException("currentUserData was not set up!");
-        else return currentUserDada.getTrips() == null;
+        else if (currentUserDada.getTrips() == null)
+            return false;
+        else return !currentUserDada.getTrips().isEmpty();
     }
 
     public static List<String> getListOfTripPlaces(int index) {

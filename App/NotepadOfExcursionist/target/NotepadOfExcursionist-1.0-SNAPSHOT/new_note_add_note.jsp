@@ -9,13 +9,18 @@
         <span>
         <label for="type">Typ</label>
         <select id="type" name="type">
-            <option value="road_trip">Road trip</option>
-            <option value="cycling">Kolo</option>
-            <option value="hiking">Turistika</option>
-            <option value="walk">Procházka</option>
-            <option value="travelling">Cestování</option>
+            <option value="road trip - auto">Road trip - auto</option>
+            <option value="road trip - motorka">Road trip - motorka</option>
+            <option value="koli">Kolo</option>
+            <option value="turistika">Turistika</option>
+            <option value="procházka">Procházka</option>
+            <option value="cestování">Cestování</option>
         </select>
     </span>
+        <span>
+            <label for="places">Názvy míst</label>
+            <input type="text" id="places" name="places">
+        </span>
         <span>
         <label for="pictures">Obrázky</label>
         <input type="file" id="pictures" name="pictures" multiple>
@@ -44,7 +49,6 @@
         <input type="file" id="gpx_file" name="gpx_file">
     </span>
         <input type="submit" value="Uložit">
-
     </form>
 </div>
 

@@ -1,6 +1,7 @@
 package cz.osu.opr3.project.notepadofexcursionist.repository;
 
 import cz.osu.opr3.project.notepadofexcursionist.Constants;
+import cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity;
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.UserEntity;
 
 import javax.persistence.*;
@@ -9,23 +10,23 @@ import java.util.List;
 
 public class UserDBRepository {
 
-    private static EntityManager entityManager = null;
-    private static EntityManagerFactory entityManagerFactory = null;
+    private static EntityManager entityManager;
+    private static EntityManagerFactory entityManagerFactory;
 
     private void initialize() {
-        if (entityManagerFactory == null)
-            try {
-                entityManagerFactory = Persistence.createEntityManagerFactory(Constants.PERSISTENCE_NAME);
-            } catch (Exception e) {
-                throw new DBException("Failed to create entity manager factory! ........" + e.getMessage(), e);
-            }
 
-        if (entityManager == null)
-            try {
-                entityManager = entityManagerFactory.createEntityManager();
-            } catch (Exception e) {
-                throw new DBException("Failed to create entity manager!", e);
-            }
+        try {
+            entityManagerFactory = Persistence.createEntityManagerFactory(Constants.PERSISTENCE_NAME);
+        } catch (Exception e) {
+            throw new DBException("Failed to create entity manager factory! ........" + e.getMessage(), e);
+        }
+
+
+        try {
+            entityManager = entityManagerFactory.createEntityManager();
+        } catch (Exception e) {
+            throw new DBException("Failed to create entity manager!", e);
+        }
 
     }
 
@@ -43,7 +44,6 @@ public class UserDBRepository {
 
     }
 
-
     public List<UserEntity> findAll() {
         initialize();
 
@@ -57,7 +57,25 @@ public class UserDBRepository {
         } catch (NoResultException e) {
             ret = new ArrayList<>();
         } catch (Exception e) {
-            throw new DBException("Failed to find-all results of product-entity.", e);
+            throw new DBException("Failed to find-all results of user-entity.", e);
+        }
+
+        return ret;
+    }
+
+    public UserEntity findById(int userId) {
+        initialize();
+
+        TypedQuery<UserEntity> typedQuery = entityManager.createQuery(
+                "SELECT user FROM UserEntity user WHERE user.userId = :userId",
+                UserEntity.class);
+        typedQuery.setParameter("userId", userId);
+
+        UserEntity ret;
+        try {
+            ret = typedQuery.getSingleResult();
+        } catch (Exception e) {
+            throw new DBException("Failed to find by id result of user with id " + userId, e);
         }
 
         return ret;
