@@ -1,4 +1,4 @@
-package cz.osu.opr3.project.notepadofexcursionist.repository;
+package cz.osu.opr3.project.notepadofexcursionist.repository.utils;
 
 public class DBException extends RuntimeException {
 

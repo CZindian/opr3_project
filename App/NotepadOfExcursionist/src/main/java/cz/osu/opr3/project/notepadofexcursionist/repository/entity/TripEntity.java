@@ -1,6 +1,5 @@
 package cz.osu.opr3.project.notepadofexcursionist.repository.entity;
 
-import cz.osu.opr3.project.notepadofexcursionist.model.Category;
 import lombok.Getter;
 import lombok.Setter;
 

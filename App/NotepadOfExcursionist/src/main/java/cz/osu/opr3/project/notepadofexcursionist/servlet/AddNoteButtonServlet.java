@@ -17,8 +17,8 @@ public class AddNoteButtonServlet extends HttpServlet {
         try {
             response.sendRedirect("page_new_note.jsp");
         } catch (Exception e) {
-            response.sendRedirect(request.getRequestURI());
+            response.sendRedirect("page_main.jsp");
         }
-        
     }
+
 }

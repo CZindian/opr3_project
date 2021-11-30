@@ -49,6 +49,7 @@ public class UserEntity {
     @OneToMany(mappedBy = "userEntity")
     private List<TripEntity> trips;
 
-    public UserEntity(){}
+    public UserEntity() {
+    }
 
 }

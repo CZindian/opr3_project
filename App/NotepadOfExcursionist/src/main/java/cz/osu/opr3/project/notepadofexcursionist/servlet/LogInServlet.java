@@ -21,17 +21,15 @@ public class LogInServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         try {
             UserEntity userEntity = DBService.getCurrentUserEntity(request.getParameter(EMAIL), request.getParameter(PASSWORD));
             CurrentUserManager.initialize(userEntity);
-
             response.sendRedirect("page_main.jsp");
+
         } catch (Exception e) {
-            e.getMessage();
             e.printStackTrace();
             response.sendRedirect("index.jsp");
         }
-
     }
+
 }

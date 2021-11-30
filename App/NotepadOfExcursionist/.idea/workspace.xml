@@ -10,34 +10,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3b50c58-30fb-42a0-ac4c-61b951c5973c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/servlet/NewNoteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/26889655-1ab4-4f05-b4fb-62b50facae8f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/26889655-1ab4-4f05-b4fb-62b50facae8f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/26889655-1ab4-4f05-b4fb-62b50facae8f/storage_v2/_src_/database/EXCURSIONIST_NOTE.abnaDg/schema/PUBLIC.aaZQjQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/26889655-1ab4-4f05-b4fb-62b50facae8f/storage_v2/_src_/database/EXCURSIONIST_NOTE.abnaDg/schema/PUBLIC.aaZQjQ.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/repository/DBException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/repository/utils/DBException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/repository/TripDBRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/repository/TripDBRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/repository/UserDBRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/repository/UserDBRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/repository/entity/TripEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/repository/entity/TripEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/repository/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/repository/entity/UserEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/service/CurrentUserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/service/CurrentUserManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/service/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/service/DBService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/servlet/AddNoteButtonServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/servlet/AddNoteButtonServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/servlet/LogInServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/servlet/LogInServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/servlet/LogOutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/servlet/LogOutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/servlet/NewNoteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/servlet/NewNoteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main_navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main_navigation.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main_notes_content.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main_notes_content.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/new_note_add_btn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/new_note_add_btn.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/new_note_add_note.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/new_note_add_note.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/repository/UserDBRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/repository/UserDBRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/repository/entity/TripEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/repository/entity/TripEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/repository/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/repository/entity/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/service/CurrentUserManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/service/CurrentUserManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/servlet/LogInServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/servlet/LogInServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/main_notes_content.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/main_notes_content.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/new_note_add_note.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/new_note_add_note.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/repository/UserDBRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/repository/UserDBRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/repository/entity/TripEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/repository/entity/TripEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/repository/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/repository/entity/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/service/CurrentUserManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/service/CurrentUserManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/servlet/LogInServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/servlet/LogInServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/page_log_in.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page_log_in.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/page_main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page_main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/page_new_note.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page_new_note.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/page_update_note.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page_update_note.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +99,7 @@
       <module name="NotepadOfExcursionist" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cz.osu.opr3.project.notepadofexcursionist.repository.*" />
+          <option name="PATTERN" value="cz.osu.opr3.project.notepadofexcursionist.repository.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -917,7 +914,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1638270944692</updated>
-      <workItem from="1638270946021" duration="24015000" />
+      <workItem from="1638270946021" duration="27063000" />
     </task>
     <servers />
   </component>
@@ -942,16 +939,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/servlet/NewNoteServlet.java</url>
           <line>33</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/servlet/NewNoteServlet.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/service/CurrentUserManager.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/servlet/NewNoteServlet.java</url>

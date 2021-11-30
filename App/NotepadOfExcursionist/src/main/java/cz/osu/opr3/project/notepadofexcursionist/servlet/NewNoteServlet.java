@@ -1,10 +1,10 @@
 package cz.osu.opr3.project.notepadofexcursionist.servlet;
 
 import cz.osu.opr3.project.notepadofexcursionist.repository.TripDBRepository;
-import cz.osu.opr3.project.notepadofexcursionist.repository.UserDBRepository;
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity;
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.UserEntity;
 import cz.osu.opr3.project.notepadofexcursionist.service.CurrentUserManager;
+import cz.osu.opr3.project.notepadofexcursionist.service.DBService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -37,12 +37,12 @@ public class NewNoteServlet extends HttpServlet {
             );
             new TripDBRepository().create(tripEntity);
 
-            UserEntity userEntity = new UserDBRepository().findById(
-                    CurrentUserManager.getCurrentUserDada().getUserId()
-            );
-            CurrentUserManager.update(userEntity);
-
+            String email = CurrentUserManager.getCurrentUserDada().getUserEmail();
+            String password = CurrentUserManager.getCurrentUserDada().getUserPassword();
+            UserEntity userEntity = DBService.getCurrentUserEntity(email, password);
+            CurrentUserManager.setCurrentUserDada(userEntity);
             response.sendRedirect("page_main.jsp");
+
         }catch (Exception e){
             e.printStackTrace();
             response.sendRedirect(request.getRequestURI());

@@ -17,11 +17,11 @@ public class LogOutServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        try{
+        try {
             CurrentUserManager.setLogOut();
             response.sendRedirect("index.jsp");
 
-        }catch (Exception e){
+        } catch (Exception e) {
             response.sendRedirect(request.getRequestURI());
         }
     }

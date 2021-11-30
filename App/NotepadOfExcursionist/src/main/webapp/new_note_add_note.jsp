@@ -1,5 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <div class="trip_div">
     <form action="NewNoteServlet" method="post" id="new_note">
     <span>
