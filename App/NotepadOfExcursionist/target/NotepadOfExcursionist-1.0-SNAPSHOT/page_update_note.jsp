@@ -1,8 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
     <meta charset="UTF-8"/>
     <meta name="keywords" content=""/>
@@ -24,11 +22,9 @@
     <jsp:include page="new_note_add_note.jsp"/>
 </main>
 
-
 <footer>
     <jsp:include page="main_footer.jsp"/>
 </footer>
 
 </body>
-
 </html>

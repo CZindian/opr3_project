@@ -3,7 +3,6 @@
 <%@ page import="cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <c:if test="<%=CurrentUserManager.hasTrips()%>">
     <%
         List<TripEntity> trips = CurrentUserManager.getCurrentUserDada().getTrips();

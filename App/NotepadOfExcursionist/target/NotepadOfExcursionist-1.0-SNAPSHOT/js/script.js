@@ -1,15 +1,15 @@
-const imgDiv = document.querySelector(".img_div");
-const picturesDiv = document.querySelector(".img_div");
-const imgInp = document.getElementById("pictures");
+const imgDivToShow = document.querySelector(".img_div");
+const selectedPicturesDiv = document.querySelector(".img_div");
+const selectedImgInput = document.getElementById("pictures");
 
-imgDiv.classList.add("hidden");
+imgDivToShow.classList.add("hidden");
 
-imgInp.onchange = evt => {
-    const [file] = imgInp.files;
-    if (imgDiv.classList.contains("hidden")){
-        imgDiv.classList.add("visible");
+selectedImgInput.onchange = evt => {
+    const [file] = selectedImgInput.files;
+    if (imgDivToShow.classList.contains("hidden")) {
+        imgDivToShow.classList.add("visible");
     }
     if (file) {
-        picturesDiv.innerHTML += "<img src='" + URL.createObjectURL(file) + "' alt='" + file.name + "'>";
+        selectedPicturesDiv.innerHTML += "<img src='" + URL.createObjectURL(file) + "' alt='" + file.name + "'>";
     }
 }

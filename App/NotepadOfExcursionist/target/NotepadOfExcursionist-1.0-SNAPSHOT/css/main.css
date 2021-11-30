@@ -8,12 +8,12 @@ body {
     position: relative;
 }
 
-.hidden{
+.hidden {
     visibility: hidden;
     position: fixed;
 }
 
-.visible{
+.visible {
     visibility: visible;
     position: absolute;
 }
@@ -68,7 +68,6 @@ body {
     padding: 0.5em;
     font-size: 1.1em;
 }
-
 /*Log in page - end*/
 
 /*Main page - start*/
@@ -107,7 +106,6 @@ nav form input[type="submit"] {
 #add_btn {
     padding: 1em 1.5em;
 }
-
 /*Main page - end*/
 
 /*Main notes view - start*/
@@ -153,7 +151,6 @@ main {
 .trip_adjust_div {
     justify-content: right;
 }
-
 /*Main notes view - end*/
 
 /*Footer - start*/
@@ -164,18 +161,16 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
 /*Footer - end*/
 
 /*Add note - start*/
-main #new_note{
+main #new_note {
     display: grid;
     padding: 1em;
     font-size: 1.2em;
 }
 
-main #new_note span{
+main #new_note span {
     margin-bottom: 1em;
 }
-
 /*Add note - end*/
