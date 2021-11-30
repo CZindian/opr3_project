@@ -4,9 +4,8 @@ import java.util.List;
 
 import cz.osu.opr3.project.notepadofexcursionist.db.entity.TripEntity;
 import cz.osu.opr3.project.notepadofexcursionist.db.entity.UserEntity;
-import cz.osu.opr3.project.notepadofexcursionist.model.CurrentUser;
+import cz.osu.opr3.project.notepadofexcursionist.service.CurrentUserManager;
 import cz.osu.opr3.project.notepadofexcursionist.service.DBService;
-import cz.osu.opr3.project.notepadofexcursionist.service.NotepadManager;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -29,8 +28,7 @@ public class LogInServlet extends HttpServlet {
         try {
             UserEntity userEntity = DBService.getCurrentUserEntity(request.getParameter(EMAIL), request.getParameter(PASSWORD));
             List<TripEntity> trips = null;
-            new CurrentUser(userEntity, trips);
-            NotepadManager.setIsClientLoggedIn(true);
+            CurrentUserManager.initialize(userEntity, trips);
 
             response.sendRedirect("page_main.jsp");
         } catch (Exception e) {

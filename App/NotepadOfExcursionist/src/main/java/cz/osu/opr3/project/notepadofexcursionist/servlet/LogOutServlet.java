@@ -1,6 +1,6 @@
 package cz.osu.opr3.project.notepadofexcursionist.servlet;
 
-import cz.osu.opr3.project.notepadofexcursionist.service.NotepadManager;
+import cz.osu.opr3.project.notepadofexcursionist.service.CurrentUserManager;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -18,8 +18,9 @@ public class LogOutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         try{
-            NotepadManager.setIsClientLoggedIn(false);
+            CurrentUserManager.setLogOut();
             response.sendRedirect("index.jsp");
+
         }catch (Exception e){
             response.sendRedirect(request.getRequestURI());
         }
