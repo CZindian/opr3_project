@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.centralizing_div {
+    height: 40em;
+    position: relative;
+}
+
+.hidden{
+    visibility: hidden;
+    position: fixed;
+}
+
+.visible{
+    visibility: visible;
+    position: absolute;
+}
+
+/*Log in page - start*/
+.log_in_div {
+    width: 30em;
+    height: 20em;
+    display: grid;
+    justify-content: center;
+    border: 0.1em solid black;
+    border-radius: 1em;
+    margin: 0;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.log_in_div span {
+    height: 0;
+    display: grid;
+    align-items: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+.log_in_div form {
+    display: grid;
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+.log_in_div form span {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+.log_in_div form span label {
+    margin-right: 0.5em;
+}
+
+.log_in_div form span input {
+    height: 1.5em;
+}
+
+.log_in_div form input[type="submit"] {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    font-size: 1.1em;
+}
+
+/*Log in page - end*/
+
+/*Main page - start*/
+nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5em;
+    padding: 1em 0;
+    background-color: rgba(232, 232, 232, 1);
+}
+
+nav form:nth-child(1) {
+    padding-left: 25%;
+}
+
+nav div {
+    padding-right: 1em;
+    display: flex;
+    width: 15em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav div img {
+    width: 5em;
+}
+
+nav form input[type="submit"] {
+    font-size: 1em;
+    background-color: white;
+}
+
+#add_btn {
+    padding: 1em 1.5em;
+}
+
+/*Main page - end*/
+
+/*Main notes view - start*/
+main {
+    padding-top: 7em;
+    padding-bottom: 1em;
+    width: 100%;
+    min-height: 90vh;
+    background-color: lightgray;
+}
+
+.trip_div {
+    margin: 1em auto 0 auto;
+    padding: 1em;
+    width: 40em;
+    background-color: gray;
+}
+
+.trip_div div {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 39rem;
+    background-color: white
+}
+
+.trip_heading_div {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.trip_places_div,
+.trip_adjust_div {
+    display: flex;
+    align-items: center;
+}
+
+.trip_div img {
+    width: 40rem;
+    margin-bottom: 0.25rem;
+}
+
+.trip_adjust_div {
+    justify-content: right;
+}
+
+/*Main notes view - end*/
+
+/*Footer - start*/
+footer {
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Footer - end*/
+
+/*Add note - start*/
+main #new_note{
+    display: grid;
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+main #new_note span{
+    margin-bottom: 1em;
+}
+
+/*Add note - end*/
