@@ -11,7 +11,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,10 +30,10 @@ public class LogInServlet extends HttpServlet {
         try {
             UserEntity userEntity = DBService.getCurrentUserEntity(request.getParameter(EMAIL), request.getParameter(PASSWORD));
             List<TripEntity> trips = null;
-            Map<UserEntity, List<TripEntity>> userNotesMap = new HashMap<>();
+            Map<UserEntity, List<TripEntity>> currentUserData = new HashMap<>();
             //TODO trips!!!
-            userNotesMap.put(userEntity, trips);
-            NotepadManager.setUserNotesMap(userNotesMap);
+            currentUserData.put(userEntity, trips);
+            NotepadManager.setCurrentUserData(currentUserData);
             NotepadManager.setIsClientLoggedIn(true);
 
             response.sendRedirect("page_main.jsp");

@@ -9,23 +9,23 @@ import java.util.Map;
 public class NotepadManager {
 
     private static boolean isClientLoggedIn = false;
-    private static Map<UserEntity, List<TripEntity>> userNotesMap;
+    private static Map<UserEntity, List<TripEntity>> currentUserData;
 
 
-    public static void setIsClientLoggedIn(boolean value) {
-        isClientLoggedIn = value;
+    public static Map<UserEntity, List<TripEntity>> getCurrentUserData() {
+        return currentUserData;
     }
 
-    public static Map<UserEntity, List<TripEntity>> getUserNotesMap() {
-        return userNotesMap;
-    }
-
-    public static void setUserNotesMap(Map<UserEntity, List<TripEntity>> userNotesMap) {
-        NotepadManager.userNotesMap = userNotesMap;
+    public static void setCurrentUserData(Map<UserEntity, List<TripEntity>> currentUserData) {
+        NotepadManager.currentUserData = currentUserData;
     }
 
     public static boolean isIsClientLoggedIn() {
         return isClientLoggedIn;
+    }
+
+    public static void setIsClientLoggedIn(boolean value) {
+        isClientLoggedIn = value;
     }
 
     /*    public void setUserNotesMap(){
