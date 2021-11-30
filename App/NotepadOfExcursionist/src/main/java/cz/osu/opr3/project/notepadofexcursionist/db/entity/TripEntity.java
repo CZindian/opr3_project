@@ -8,16 +8,20 @@ import javax.persistence.*;
 import java.util.List;
 import java.util.Set;
 
-@Getter
-@Setter
 @Entity
 @Table(name = "TRIP", schema = "PUBLIC")
+@Getter
+@Setter
 public class TripEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "TRIP_ID")
     private int tripID;
+
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="userId")
+    private UserEntity userEntity;
 
     @Basic
     @Column(name = "TRIP_TITLE")
@@ -54,9 +58,5 @@ public class TripEntity {
     @Basic
     @Column(name = "TRIP_PICTURES")
     private String tripPictures;
-
-    /*@ManyToOne
-    @JoinColumn(name = "USER_ID", nullable = false)
-    private UserEntity userEntity;*/
 
 }

@@ -1,5 +1,6 @@
 package cz.osu.opr3.project.notepadofexcursionist.db.repository;
 
+import cz.osu.opr3.project.notepadofexcursionist.Constants;
 import cz.osu.opr3.project.notepadofexcursionist.db.DBException;
 import cz.osu.opr3.project.notepadofexcursionist.db.entity.UserEntity;
 import cz.osu.opr3.project.notepadofexcursionist.model.User;
@@ -12,14 +13,13 @@ public class UserDBRepository {
 
     private static EntityManager entityManager = null;
     private static EntityManagerFactory entityManagerFactory = null;
-    private static final String PU_NAME = "userPU";
 
     private void initialize() {
         if (entityManagerFactory == null)
             try {
-                entityManagerFactory = Persistence.createEntityManagerFactory(PU_NAME);
+                entityManagerFactory = Persistence.createEntityManagerFactory(Constants.PERSISTENCE_NAME);
             } catch (Exception e) {
-                throw new DBException("Failed to create entity manager factory!", e);
+                throw new DBException("Failed to create entity manager factory! ........" + e.getMessage(), e);
             }
 
         if (entityManager == null)

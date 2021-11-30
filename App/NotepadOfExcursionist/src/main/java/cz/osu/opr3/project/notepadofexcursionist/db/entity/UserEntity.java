@@ -2,15 +2,16 @@ package cz.osu.opr3.project.notepadofexcursionist.db.entity;
 
 import java.util.List;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
 @Entity
 @Table(name = "USER", schema = "PUBLIC")
+@Getter
+@Setter
 public class UserEntity {
 
     @Id
@@ -46,9 +47,7 @@ public class UserEntity {
     @Column(name = "USER_TELEPHONE_NUMBER")
     private String userTelephoneNumber;
 
-    /*@OneToMany(mappedBy = "userEntity")
-    private List<TripEntity> trips;*/
-
-
+    @OneToMany(mappedBy = "userEntity")
+    private List<TripEntity> trips;
 
 }

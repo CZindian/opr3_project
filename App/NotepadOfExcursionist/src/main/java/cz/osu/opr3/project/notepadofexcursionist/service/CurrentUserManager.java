@@ -45,14 +45,20 @@ public class CurrentUserManager {
     }
 
     public static boolean isProfilePicture() {
-        return !currentUserDada.getUserProfilePicture().isEmpty();
+        if(currentUserDada.getUserProfilePicture() == null)
+            throw new NullPointerException("currentUserData was not set up!");
+        else return !currentUserDada.getUserProfilePicture().isEmpty();
     }
 
     public static String getNameSurname() {
-        return currentUserDada.getUserName() + " " + currentUserDada.getUserSurname();
+        if (currentUserDada.getUserName() == null || currentUserDada.getUserSurname() == null)
+            throw new NullPointerException("currentUserData was not set up!");
+        else return currentUserDada.getUserName() + " " + currentUserDada.getUserSurname();
     }
 
     public static String getProfilePicture() {
-        return currentUserDada.getUserProfilePicture();
+        if (!isProfilePicture())
+            throw new NullPointerException("currentUserData was not set up!");
+        else return currentUserDada.getUserProfilePicture();
     }
 }
