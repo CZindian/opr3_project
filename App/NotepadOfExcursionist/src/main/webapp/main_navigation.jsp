@@ -7,10 +7,12 @@
 
 <div>
     <c:if test="${currenUser.currentUserDada.userEmail != null && currenUser.currentUserDada.userEmail.length() > 0}">
-        <img src="${currenUser.currentUserDada.userProfilePicture}" alt="profilový obrázek ${currenUser.currentUserDada.userName} ${currenUser.currentUserDada.userSurname}">
+        <img src="${currenUser.currentUserDada.userProfilePicture}"
+             alt="profilový obrázek ${currenUser.currentUserDada.userName} ${currenUser.currentUserDada.userSurname}">
     </c:if>
     <c:if test="${currenUser.currentUserDada.userEmail == null || currenUser.currentUserDada.userEmail.length() == 0}">
-        <img src="<%=Constants.DEFAULT_USER_PICTURE_BASE64_STRING%>" alt="přednastavený obrázek ${currenUser.currentUserDada.userName} ${currenUser.currentUserDada.userSurname}">
+        <img src="<%=Constants.DEFAULT_USER_PICTURE_BASE64_STRING%>"
+             alt="přednastavený obrázek ${currenUser.currentUserDada.userName} ${currenUser.currentUserDada.userSurname}">
     </c:if>
     <span>${currenUser.currentUserDada.userName} ${currenUser.currentUserDada.userSurname}</span>
     <form action="LogOutServlet" method="post">
