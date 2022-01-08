@@ -13,6 +13,8 @@ import static cz.osu.opr3.project.notepadofexcursionist.utils.Validator.isNotEmp
 public class LoggedInUserManager {
 
     private static boolean isClientLoggedIn = false;
+    private static boolean isErrorRaised = false;
+    private static String errorValue;
     private static UserEntity userData;
     private static List<TripEntity> tripData;
 
@@ -51,6 +53,22 @@ public class LoggedInUserManager {
     public static boolean isSetProfilePicture() {
         isAssigned(userData);
         return !userData.getUserProfilePicture().isEmpty();
+    }
+
+    public static boolean isIsErrorRaised() {
+        return isErrorRaised;
+    }
+
+    public static void setIsErrorRaised(boolean isErrorRaised) {
+        LoggedInUserManager.isErrorRaised = isErrorRaised;
+    }
+
+    public static String getErrorValue() {
+        return errorValue;
+    }
+
+    public static void setErrorValue(String errorValue) {
+        LoggedInUserManager.errorValue = errorValue;
     }
 
 

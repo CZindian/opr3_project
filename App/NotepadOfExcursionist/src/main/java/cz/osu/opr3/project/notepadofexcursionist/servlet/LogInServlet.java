@@ -23,20 +23,33 @@ public class LogInServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String userEmail = request.getParameter(EMAIL).toLowerCase().trim();
+        String userPassword = request.getParameter(PASSWORD).trim();
+
         try {
-            logInUser(request);
+            logInUser(request, userEmail, userPassword);
             response.sendRedirect("page_main.jsp");
 
         } catch (Exception e) {
             e.printStackTrace();
+            LoggedInUserManager.setIsErrorRaised(true);
+
             response.sendRedirect("index.jsp");
         }
     }
 
-    private void logInUser(HttpServletRequest request) {
-        UserEntity loggedInUser = DBService.getUserEntity(request.getParameter(EMAIL), request.getParameter(PASSWORD));
+    private void logInUser(HttpServletRequest request, String userEmail, String userPassword) {
+        setSessionFor(userEmail, request);
+
+        UserEntity loggedInUser = DBService.getUserEntity(userEmail, userPassword);
         List<TripEntity> usersTrips = DBService.getUsersTrips(loggedInUser.getUserId());
+
         LoggedInUserManager.initialize(loggedInUser, usersTrips);
+    }
+
+    private void setSessionFor(String userEmail, HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        session.setAttribute("user_email", userEmail);
     }
 
 }
