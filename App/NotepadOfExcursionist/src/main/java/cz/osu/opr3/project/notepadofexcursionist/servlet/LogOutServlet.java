@@ -18,7 +18,7 @@ public class LogOutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         try {
-            LoggedInUserManager.setLogOut();
+            LoggedInUserManager.clearAllData();
             response.sendRedirect("index.jsp");
 
         } catch (Exception e) {

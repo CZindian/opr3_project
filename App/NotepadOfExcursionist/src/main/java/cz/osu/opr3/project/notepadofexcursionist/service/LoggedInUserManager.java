@@ -12,16 +12,20 @@ import static cz.osu.opr3.project.notepadofexcursionist.utils.Validator.isNotEmp
 
 public class LoggedInUserManager {
 
-
     private static boolean isClientLoggedIn = false;
     private static UserEntity userData;
-    //TODO get set??
     private static List<TripEntity> tripData;
 
     public static void initialize(UserEntity loggedInUserData, List<TripEntity> usersTripData) {
         LoggedInUserManager.userData = loggedInUserData;
         LoggedInUserManager.tripData = usersTripData;
         isClientLoggedIn = true;
+    }
+
+    public static void clearAllData() {
+        setUserData(null);
+        setUserData(null);
+        setIsClientLoggedIn(false);
     }
 
     public static UserEntity getUserData() {
@@ -40,21 +44,15 @@ public class LoggedInUserManager {
         LoggedInUserManager.tripData = tripData;
     }
 
-    //TODO is logged??
-    public static boolean isIsClientLoggedIn() {
-        return userData != null && isClientLoggedIn;
-    }
-
-    public static void setLogOut() {
-        userData = null;
-        tripData = null;
-        isClientLoggedIn = false;
+    public static void setIsClientLoggedIn(boolean isClientLoggedIn) {
+        LoggedInUserManager.isClientLoggedIn = isClientLoggedIn;
     }
 
     public static boolean isSetProfilePicture() {
         isAssigned(userData);
         return !userData.getUserProfilePicture().isEmpty();
     }
+
 
     public static String getNameAndSurname() {
         isAssigned(userData);
@@ -64,16 +62,6 @@ public class LoggedInUserManager {
     public static String getProfilePicture() {
         isAssigned(userData);
         return userData.getUserProfilePicture();
-    }
-
-    public static boolean hasTrips() {
-        /*isAssigned(userData);
-
-        if (userData.getTrips() == null)
-            return false;
-        else return !userData.getTrips().isEmpty();*/
-
-        return isNotEmpty(tripData);
     }
 
     public static List<String> getListOfTripPlaces(int index) {
@@ -120,9 +108,18 @@ public class LoggedInUserManager {
             throw new NullPointerException("Current user has not any trips!");
     }
 
+
     private static void isAssigned(UserEntity currentUserDada) {
         if (currentUserDada.getUserProfilePicture() == null)
             throw new NullPointerException("currentUserData attribute was not set up!");
+    }
+
+    public static boolean hasTrips() {
+        return isNotEmpty(tripData);
+    }
+
+    public static boolean isIsClientLoggedIn() {
+        return userData != null && tripData == null && isClientLoggedIn;
     }
 
 }

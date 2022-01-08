@@ -9,7 +9,7 @@ import java.io.IOException;
 public class AddNoteButtonServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect(request.getRequestURI());
+        response.sendRedirect("page_main.jsp");
     }
 
     @Override

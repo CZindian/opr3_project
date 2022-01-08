@@ -24,16 +24,19 @@ public class LogInServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            UserEntity loggedInUser = DBService.getUserEntity(request.getParameter(EMAIL), request.getParameter(PASSWORD));
-            List<TripEntity> usersTrips = DBService.getUsersTrips(loggedInUser.getUserId());
-
-            LoggedInUserManager.initialize(loggedInUser, usersTrips);
+            logInUser(request);
             response.sendRedirect("page_main.jsp");
 
         } catch (Exception e) {
             e.printStackTrace();
             response.sendRedirect("index.jsp");
         }
+    }
+
+    private void logInUser(HttpServletRequest request) {
+        UserEntity loggedInUser = DBService.getUserEntity(request.getParameter(EMAIL), request.getParameter(PASSWORD));
+        List<TripEntity> usersTrips = DBService.getUsersTrips(loggedInUser.getUserId());
+        LoggedInUserManager.initialize(loggedInUser, usersTrips);
     }
 
 }

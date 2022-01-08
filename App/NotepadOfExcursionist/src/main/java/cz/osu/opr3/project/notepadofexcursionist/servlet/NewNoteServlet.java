@@ -21,6 +21,7 @@ public class NewNoteServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         String title = request.getParameter("heading");
         String category = request.getParameter("type");
         String date = request.getParameter("date");
@@ -32,28 +33,29 @@ public class NewNoteServlet extends HttpServlet {
 
         UserEntity loggedInUser = LoggedInUserManager.getUserData();
 
-        try{
-            TripEntity tripEntity = new TripEntity(
-                    loggedInUser.getUserId(),
-                    title, category, date, time,
-                    distance,  notes, places, pictures
-            );
-            new TripDBRepository().create(tripEntity);
-
-            /*String email = loggedInUser.getUserEmail();
-            String password = loggedInUser.getUserPassword();*/
-
-            /*UserEntity userEntity = DBService.getUserEntity(email, password);
-            LoggedInUserManager.setUserData(userEntity);*/
-            List<TripEntity> usersTrips = DBService.getUsersTrips(loggedInUser.getUserId());
-            LoggedInUserManager.setTripData(usersTrips);
+        try {
+            saveNewTrip(title, category, date, time, distance, notes, places, pictures, loggedInUser);
+            updateLoggedInUser(loggedInUser);
             response.sendRedirect("page_main.jsp");
-
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             response.sendRedirect("page_new_note.jsp");
         }
 
+    }
+
+    private void updateLoggedInUser(UserEntity loggedInUser) {
+        List<TripEntity> usersTrips = DBService.getUsersTrips(loggedInUser.getUserId());
+        LoggedInUserManager.setTripData(usersTrips);
+    }
+
+    private void saveNewTrip(String title, String category, String date, String time, String distance, String notes, String places, String pictures, UserEntity loggedInUser) {
+        TripEntity tripEntity = new TripEntity(
+                loggedInUser.getUserId(),
+                title, category, date, time,
+                distance, notes, places, pictures
+        );
+        new TripDBRepository().create(tripEntity);
     }
 
 }
