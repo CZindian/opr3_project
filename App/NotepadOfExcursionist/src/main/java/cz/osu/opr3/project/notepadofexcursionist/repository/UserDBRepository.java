@@ -1,6 +1,6 @@
 package cz.osu.opr3.project.notepadofexcursionist.repository;
 
-import cz.osu.opr3.project.notepadofexcursionist.Constants;
+import cz.osu.opr3.project.notepadofexcursionist.utils.Constants;
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.UserEntity;
 import cz.osu.opr3.project.notepadofexcursionist.repository.utils.DBException;
 
@@ -49,8 +49,6 @@ public class UserDBRepository {
             throw new DBException(
                     "UserEntity could not be saved! Message: " + e.getMessage(), e
             );
-        } finally {
-            entityManager.close();
         }
 
     }
@@ -72,6 +70,7 @@ public class UserDBRepository {
             );
         }
         return ret;
+
     }
 
     public UserEntity findById(int userId) {

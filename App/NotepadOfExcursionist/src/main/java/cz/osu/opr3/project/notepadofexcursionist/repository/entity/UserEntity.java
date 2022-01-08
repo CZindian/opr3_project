@@ -1,7 +1,5 @@
 package cz.osu.opr3.project.notepadofexcursionist.repository.entity;
 
-import java.util.List;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -45,9 +43,6 @@ public class UserEntity {
     @Basic
     @Column(name = "USER_TELEPHONE_NUMBER")
     private String userTelephoneNumber;
-
-    @OneToMany(mappedBy = "userEntity")
-    private List<TripEntity> trips;
 
     public UserEntity() {
     }

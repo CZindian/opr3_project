@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <div class="trip_div">
     <form action="NewNoteServlet" method="post" id="new_note">
     <span>
@@ -8,9 +9,9 @@
         <span>
         <label for="type">Typ</label>
         <select id="type" name="type">
-            <option value="road trip - auto">Road trip - auto</option>
-            <option value="road trip - motorka">Road trip - motorka</option>
-            <option value="koli">Kolo</option>
+            <option value="road_trip_auto">Road trip - auto</option>
+            <option value="road_trip_motorka">Road trip - motorka</option>
+            <option value="kolo">Kolo</option>
             <option value="turistika">Turistika</option>
             <option value="procházka">Procházka</option>
             <option value="cestování">Cestování</option>

@@ -1,4 +1,4 @@
-package cz.osu.opr3.project.notepadofexcursionist;
+package cz.osu.opr3.project.notepadofexcursionist.utils;
 
 public class Constants {
 

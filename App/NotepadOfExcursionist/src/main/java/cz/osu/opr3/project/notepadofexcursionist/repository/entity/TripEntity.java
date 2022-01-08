@@ -14,11 +14,11 @@ public class TripEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "TRIP_ID")
-    private int tripID;
+    private int tripId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId")
-    private UserEntity userEntity;
+    @Basic
+    @Column(name = "USER_ID")
+    private int userId;
 
     @Basic
     @Column(name = "TRIP_TITLE")
@@ -41,10 +41,6 @@ public class TripEntity {
     private String tripDistance;
 
     @Basic
-    @Column(name = "TRIP_GPX_DATA")
-    private String tripGpxData;
-
-    @Basic
     @Column(name = "TRIP_NOTES")
     private String tripNotes;
 
@@ -59,17 +55,16 @@ public class TripEntity {
     public TripEntity() {
     }
 
-    public TripEntity(UserEntity userEntity, String tripTitle, String tripCategory,
-                      String tripDate, String tripTime, String tripDistance, String tripGpxData,
+    public TripEntity(int userId, String tripTitle, String tripCategory,
+                      String tripDate, String tripTime, String tripDistance,
                       String tripNotes, String tripPlaces, String tripPictures) {
 
-        this.userEntity = userEntity;
+        this.userId = userId;
         this.tripTitle = tripTitle;
         this.tripCategory = tripCategory;
         this.tripDate = tripDate;
         this.tripTime = tripTime;
         this.tripDistance = tripDistance;
-        this.tripGpxData = tripGpxData;
         this.tripNotes = tripNotes;
         this.tripPlaces = tripPlaces;
         this.tripPictures = tripPictures;

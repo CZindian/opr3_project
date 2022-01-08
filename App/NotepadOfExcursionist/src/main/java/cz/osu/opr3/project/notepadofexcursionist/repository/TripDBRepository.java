@@ -1,12 +1,13 @@
 package cz.osu.opr3.project.notepadofexcursionist.repository;
 
-import cz.osu.opr3.project.notepadofexcursionist.Constants;
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity;
+import cz.osu.opr3.project.notepadofexcursionist.repository.entity.UserEntity;
 import cz.osu.opr3.project.notepadofexcursionist.repository.utils.DBException;
+import cz.osu.opr3.project.notepadofexcursionist.utils.Constants;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TripDBRepository {
 
@@ -49,10 +50,27 @@ public class TripDBRepository {
             throw new DBException(
                     "TripEntity could not be saved! Message: " + e.getMessage(), e
             );
-        } finally {
-            entityManager.close();
         }
 
+    }
+
+    public List<TripEntity> findAll() {
+        initialize();
+        TypedQuery<TripEntity> typedQuery = entityManager.createQuery(
+                "SELECT trip FROM TripEntity trip ORDER BY trip.tripId",
+                TripEntity.class);
+
+        List<TripEntity> ret;
+        try {
+            ret = typedQuery.getResultList();
+        } catch (NoResultException e) {
+            ret = new ArrayList<>();
+        } catch (Exception e) {
+            throw new DBException(
+                    "Failed to find-all results of TripEntity! Message: " + e.getMessage(), e
+            );
+        }
+        return ret;
     }
 
 }
