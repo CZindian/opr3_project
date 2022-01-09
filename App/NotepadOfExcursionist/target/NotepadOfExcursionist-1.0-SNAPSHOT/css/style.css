@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700");
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
 /* Log in */
 #log_in_body {
     background-image: url("../img/travel.jpg");
@@ -73,8 +80,8 @@
 /* Navbar */
 
 nav{
-    padding: 1em 0;
-    background-color: rgb(105, 251, 218);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(305deg, rgba(255, 255, 255, 0.5) 38%, rgba(105, 251, 218, 0.5) 70%);
 }
 
 .profile_img{

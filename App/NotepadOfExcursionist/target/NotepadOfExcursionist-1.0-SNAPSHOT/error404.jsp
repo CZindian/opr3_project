@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isErrorPage="true" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/error_style.css">
+    <link rel="stylesheet" type="text/css" href="css/error404_style.css">
     <title>Error 404</title>
 </head>
 <body>

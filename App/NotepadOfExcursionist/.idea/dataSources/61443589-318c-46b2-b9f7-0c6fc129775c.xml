@@ -179,7 +179,7 @@
     <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_238EF310_F826_47B5_A560_ACBCC5991A5C">
       <ObjectId>8</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <SequenceIdentity>null(2)</SequenceIdentity>
+      <SequenceIdentity>null(3)</SequenceIdentity>
       <AutoCreated>1</AutoCreated>
     </sequence>
     <sequence id="165" parent="4" name="SYSTEM_SEQUENCE_6381D1B3_ED38_4E96_AC77_2AE189990171">
@@ -198,7 +198,7 @@
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>null(2)</SequenceIdentity>
+      <SequenceIdentity>null(3)</SequenceIdentity>
     </column>
     <column id="169" parent="166" name="TRIP_CATEGORY">
       <Position>2</Position>
