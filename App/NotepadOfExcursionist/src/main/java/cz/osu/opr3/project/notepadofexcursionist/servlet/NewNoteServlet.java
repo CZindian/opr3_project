@@ -29,12 +29,12 @@ public class NewNoteServlet extends HttpServlet {
         String distance = request.getParameter("distance");
         String notes = request.getParameter("notes");
         String places = request.getParameter("places");
-        String pictures = request.getParameter("pictures");
+        String picture = request.getParameter("picture");
 
         UserEntity loggedInUser = LoggedInUserManager.getUserData();
 
         try {
-            saveNewTrip(title, category, date, time, distance, notes, places, pictures, loggedInUser);
+            saveNewTrip(title, category, date, time, distance, notes, places, picture, loggedInUser);
             updateLoggedInUser(loggedInUser);
             response.sendRedirect("page_main.jsp");
         } catch (Exception e) {
@@ -49,11 +49,11 @@ public class NewNoteServlet extends HttpServlet {
         LoggedInUserManager.setTripData(usersTrips);
     }
 
-    private void saveNewTrip(String title, String category, String date, String time, String distance, String notes, String places, String pictures, UserEntity loggedInUser) {
+    private void saveNewTrip(String title, String category, String date, String time, String distance, String notes, String places, String picture, UserEntity loggedInUser) {
         TripEntity tripEntity = new TripEntity(
                 loggedInUser.getUserId(),
                 title, category, date, time,
-                distance, notes, places, pictures
+                distance, notes, places, picture
         );
         new TripDBRepository().create(tripEntity);
     }

@@ -10,18 +10,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa1a670b-a248-4ec8-a867-2026adfcd856" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/molo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/img_load.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/61443589-318c-46b2-b9f7-0c6fc129775c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/61443589-318c-46b2-b9f7-0c6fc129775c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/61443589-318c-46b2-b9f7-0c6fc129775c/storage_v2/_src_/database/EXCURSIONIST_NOTE.abnaDg/schema/PUBLIC.aaZQjQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/61443589-318c-46b2-b9f7-0c6fc129775c/storage_v2/_src_/database/EXCURSIONIST_NOTE.abnaDg/schema/PUBLIC.aaZQjQ.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/error404_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/error404_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/repository/entity/TripEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/repository/entity/TripEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/service/LoggedInUserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/service/LoggedInUserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/servlet/NewNoteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/osu/opr3/project/notepadofexcursionist/servlet/NewNoteServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/error404.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/error404.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main_navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main_navigation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main_footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main_footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main_notes_content.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main_notes_content.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/new_note_add_note.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/new_note_add_note.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/page_new_note.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page_new_note.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/css/error404_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/css/error404_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/repository/entity/TripEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/repository/entity/TripEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/service/LoggedInUserManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/service/LoggedInUserManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/servlet/NewNoteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/WEB-INF/classes/cz/osu/opr3/project/notepadofexcursionist/servlet/NewNoteServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/error404.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/error404.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/main_navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/main_navigation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/new_note_add_btn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/new_note_add_btn.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/main_footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/main_footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/main_notes_content.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/main_notes_content.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/new_note_add_note.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/new_note_add_note.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/page_new_note.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/NotepadOfExcursionist-1.0-SNAPSHOT/page_new_note.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/repository/entity/TripEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/repository/entity/TripEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/service/LoggedInUserManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/service/LoggedInUserManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/servlet/NewNoteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cz/osu/opr3/project/notepadofexcursionist/servlet/NewNoteServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,8 +105,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Tento_pocitac-umely\Projekty\OPR3\opr3_project\App\NotepadOfExcursionist\src\main\webapp\GSAP" />
       <recent name="D:\Tento_pocitac-umely\Projekty\OPR3\opr3_project\App\NotepadOfExcursionist\src\main\webapp\img" />
+      <recent name="D:\Tento_pocitac-umely\Projekty\OPR3\opr3_project\App\NotepadOfExcursionist\src\main\webapp\GSAP" />
     </key>
   </component>
   <component name="RunManager">
@@ -891,7 +906,7 @@
       <option name="presentableId" value="Default" />
       <updated>1641641919790</updated>
       <workItem from="1641641921060" duration="30495000" />
-      <workItem from="1641723261218" duration="2355000" />
+      <workItem from="1641723261218" duration="19970000" />
     </task>
     <servers />
   </component>

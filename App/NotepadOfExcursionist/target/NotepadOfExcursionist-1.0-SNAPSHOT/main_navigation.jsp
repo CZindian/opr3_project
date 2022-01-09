@@ -4,7 +4,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="container">
-    <a class="navbar navbar-brand text-secondary" href="#">
+    <a class="navbar navbar-brand text-secondary" href="page_main.jsp">
         <h1>Poznámky výletníka</h1>
         <i class="fab fa-gratipay m-2"></i>
     </a>

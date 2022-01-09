@@ -50,14 +50,14 @@ public class TripEntity {
 
     @Basic
     @Column(name = "TRIP_PICTURES")
-    private String tripPictures;
+    private String tripPicture;
 
     public TripEntity() {
     }
 
     public TripEntity(int userId, String tripTitle, String tripCategory,
                       String tripDate, String tripTime, String tripDistance,
-                      String tripNotes, String tripPlaces, String tripPictures) {
+                      String tripNotes, String tripPlaces, String tripPicture) {
 
         this.userId = userId;
         this.tripTitle = tripTitle;
@@ -67,6 +67,6 @@ public class TripEntity {
         this.tripDistance = tripDistance;
         this.tripNotes = tripNotes;
         this.tripPlaces = tripPlaces;
-        this.tripPictures = tripPictures;
+        this.tripPicture = tripPicture;
     }
 }

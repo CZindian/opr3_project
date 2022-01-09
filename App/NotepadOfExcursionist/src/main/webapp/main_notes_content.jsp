@@ -30,12 +30,9 @@
             </ul>
         </div>
         <%
-            List<String> pictures = LoggedInUserManager.getListOfTripPictures(i);
-            for (String picture : pictures) {%>
-        <img src="<%=picture%>"
-             alt="výlet <%=trips.get(i).getTripTitle()%>, <%=trips.get(i).getTripCategory()%>, <%=trips.get(i).getTripDate()%>">
-        <%
-            }%>
+            String tripPicture = LoggedInUserManager.getTripPicture(i);
+            %>
+        <img src="<%=tripPicture%>" alt="výlet <%=trips.get(i).getTripTitle()%>, <%=trips.get(i).getTripCategory()%>, <%=trips.get(i).getTripDate()%>">
         <div>
             Datum: <%=trips.get(i).getTripDate()%>
         </div>

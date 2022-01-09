@@ -104,7 +104,7 @@ public class LoggedInUserManager {
 
     }
 
-    public static List<String> getListOfTripPictures(int index) {
+    public static String getTripPicture(int index) {
 /*        isAssigned(userData);
 
         if (userData.getTrips().get(index) == null)
@@ -117,10 +117,8 @@ public class LoggedInUserManager {
         }*/
 
         if (isNotEmpty(tripData)) {
-            List<String> ret = new ArrayList<>();
-            String[] trips = tripData.get(index).getTripPictures().split(Constants.TRIP_PICTURE_BASE_SEPARATOR);
-            Collections.addAll(ret, trips);
-            return ret;
+            String tripPicture = tripData.get(index).getTripPicture();
+            return tripPicture;
 
         } else
             throw new NullPointerException("Current user has not any trips!");
