@@ -12,9 +12,12 @@ import static cz.osu.opr3.project.notepadofexcursionist.utils.Constants.DATE_FOR
 
 @Entity
 @Table(name = "TRIP", schema = "PUBLIC")
+@NamedQueries(
+        @NamedQuery(name = "delete", query = "DELETE FROM TripEntity tripEntity WHERE tripEntity.tripId = :id")
+)
 @Getter
 @Setter
-public class TripEntity {
+public class TripEntity implements Comparable<TripEntity> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -78,6 +81,17 @@ public class TripEntity {
     private String formatDate(String tripDate) {
         LocalDate ldt = LocalDate.parse(tripDate, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         String ret = ldt.format(DateTimeFormatter.ofPattern(DATE_FORMAT_PATTERN));
+        return ret;
+    }
+
+    /*
+        * compareTo() programmed to show results from the most new one
+    */
+    @Override
+    public int compareTo(TripEntity tripEntity) {
+        LocalDate inputDate = LocalDate.parse(tripEntity.getTripDate(), DateTimeFormatter.ofPattern(DATE_FORMAT_PATTERN));
+        LocalDate currentDate = LocalDate.parse(this.getTripDate(), DateTimeFormatter.ofPattern(DATE_FORMAT_PATTERN));
+        int ret = inputDate.compareTo(currentDate);
         return ret;
     }
 

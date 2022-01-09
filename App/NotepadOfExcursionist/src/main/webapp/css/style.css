@@ -128,16 +128,16 @@ footer {
 
 /* Trip area */
 
-.trip_area form h2 {
-    margin-bottom: 1em;
-}
-
-.trip_area form {
+.trip_area .trip_form {
     margin-bottom: 1em;
     padding: 1em;
     border: 1px solid #9f9f9f;
     background: rgb(255, 255, 255);
     background: linear-gradient(305deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.90) 0%);
+}
+
+.trip_area .trip_form h2 {
+    margin-bottom: 1em;
 }
 
 #trip_img{

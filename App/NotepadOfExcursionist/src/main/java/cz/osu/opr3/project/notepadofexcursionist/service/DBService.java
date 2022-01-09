@@ -40,4 +40,7 @@ public class DBService {
         return usersTrips;
     }
 
+    public static void deleteTrip(int tripId) {
+        new TripDBRepository().delete(tripId);
+    }
 }

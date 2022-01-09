@@ -6,6 +6,7 @@ import cz.osu.opr3.project.notepadofexcursionist.repository.utils.DBException;
 import cz.osu.opr3.project.notepadofexcursionist.utils.Constants;
 
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaDelete;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,4 +74,34 @@ public class TripDBRepository {
         return ret;
     }
 
+    public TripEntity findById(int tripId) {
+        initialize();
+        TypedQuery<TripEntity> typedQuery = entityManager.createQuery(
+                "SELECT tripEntity FROM TripEntity tripEntity WHERE tripEntity.tripId = :tripId",
+                TripEntity.class);
+        typedQuery.setParameter("tripId", tripId);
+
+        TripEntity ret;
+        try {
+            ret = typedQuery.getSingleResult();
+        } catch (Exception e) {
+            throw new DBException(
+                    "Failed to find-by-id result of trip with id " + tripId + " \nMessage: " + e.getMessage(), e
+            );
+        }
+        return ret;
+    }
+
+    public void delete(int tripId) {
+        initialize();
+
+        try{
+            entityManager.getTransaction().begin();
+            TripEntity tripEntity = findById(tripId);
+            entityManager.remove(tripEntity);
+            entityManager.getTransaction().commit();
+        } catch (Exception e) {
+            throw new DBException("Failed to delete trip with id '" + tripId + "'", e);
+        }
+    }
 }

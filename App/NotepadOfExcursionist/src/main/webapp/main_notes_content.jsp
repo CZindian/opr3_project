@@ -1,14 +1,16 @@
 <%@ page import="cz.osu.opr3.project.notepadofexcursionist.service.LoggedInUserManager" %>
 <%@ page import="java.util.List" %>
 <%@ page import="cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity" %>
+<%@ page import="java.util.Collections" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <c:if test="<%=LoggedInUserManager.hasTrips()%>">
     <%
         List<TripEntity> trips = LoggedInUserManager.getTripData();
+        Collections.sort(trips);
         for (int i = 0; i < trips.size(); i++) {%>
-    <form>
+    <form class="trip_form">
         <div class="form-group row align-items-center my-3">
             <label for="heading" class="col-sm-4 col-form-label">Výlet</label>
             <div class="col-sm-8">
@@ -142,11 +144,17 @@
             </div>
         </div>
         <div class="form-group row align-items-center my-3">
-            <div class="col-md-6">
-                <button class="btn btn-info"><i class="far fa-edit"></i> Upravit (nepřipraveno)</button>
+            <div class="col-md-6 text-center">
+                <form action="DeleteNoteServlet" method="post">
+                    <input type="hidden" value="<%=trips.get(i).getTripId()%>" name="tripIdDelete">
+                    <button type="submit" class="btn btn-warning"><i class="far fa-trash-alt"></i> Smazat</button>
+                </form>
             </div>
-            <div class="col-md-6">
-                <button class="btn btn-warning"><i class="far fa-trash-alt"></i> Smazat (nepřipraveno)</button>
+            <div class="col-md-6 text-center">
+                <form action="UpdateNoteServlet" method="post">
+                    <input type="hidden" value="<%=trips.get(i).getTripId()%>" name="tripIdUpdate">
+                    <button type="submit" class="btn btn-info"><i class="far fa-edit"></i> Upravit</button>
+                </form>
             </div>
         </div>
     </form>
