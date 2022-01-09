@@ -16,15 +16,18 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Hlavní stránka</title>
 </head>
-<body>
+<body id="main_page_body">
 
 <nav class="navbar navbar-expand-lg">
     <jsp:include page="main_navigation.jsp"/>
 </nav>
 
-<main class="container">
-    <jsp:include page="main_notes_content.jsp"/>
-</main>
+<div class="main_page_div">
+    <main class="trip_area">
+        <jsp:include page="main_notes_content.jsp"/>
+    </main>
+</div>
+
 
 <footer>
     <jsp:include page="main_footer.jsp"/>

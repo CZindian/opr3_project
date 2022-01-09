@@ -5,6 +5,8 @@ public class Constants {
     public static final String PERSISTENCE_NAME = "namePU";
     public static final String EMAIL = "email";
     public static final String PASSWORD = "password";
+    public static final String DATE_FORMAT_PATTERN = "d.M.yyyy";
+    public static final String TIME_FORMAT_PATTERN = "h:mm:ss";
     public static final String DEFAULT_USER_PICTURE_BASE64_STRING = getDefaultUserPicture();
     public static final String TRIP_PLACE_STRING_SEPARATOR = ",";
     public static final String TRIP_PICTURE_BASE_SEPARATOR = "@star.*@end";

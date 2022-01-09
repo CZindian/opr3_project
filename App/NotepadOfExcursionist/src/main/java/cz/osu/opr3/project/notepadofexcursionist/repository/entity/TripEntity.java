@@ -4,6 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+import static cz.osu.opr3.project.notepadofexcursionist.utils.Constants.DATE_FORMAT_PATTERN;
 
 @Entity
 @Table(name = "TRIP", schema = "PUBLIC")
@@ -62,11 +67,18 @@ public class TripEntity {
         this.userId = userId;
         this.tripTitle = tripTitle;
         this.tripCategory = tripCategory;
-        this.tripDate = tripDate;
+        this.tripDate = formatDate(tripDate);
         this.tripTime = tripTime;
         this.tripDistance = tripDistance;
         this.tripNotes = tripNotes;
         this.tripPlaces = tripPlaces;
         this.tripPicture = tripPicture;
     }
+
+    private String formatDate(String tripDate) {
+        LocalDate ldt = LocalDate.parse(tripDate, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        String ret = ldt.format(DateTimeFormatter.ofPattern(DATE_FORMAT_PATTERN));
+        return ret;
+    }
+
 }
