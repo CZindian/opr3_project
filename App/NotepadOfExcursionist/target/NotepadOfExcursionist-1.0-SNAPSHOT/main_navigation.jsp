@@ -36,19 +36,19 @@
                              loading="lazy">
                     </c:if>
                 </button>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li class="text-center">
+                        <form action="LogOutServlet" method="post">
+                            <button type="submit" class="btn btn-sm btn-danger">
+                                <i class="fas fa-sign-out-alt"></i> Odhlásit se
+                            </button>
+                        </form>
+                    </li>
+                </ul>
             </div>
             <div class="row text-center">
                 <%=LoggedInUserManager.getNameAndSurname()%>
             </div>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li class="text-center">
-                    <form action="LogOutServlet" method="post">
-                        <button type="submit" class="btn btn-sm btn-danger">
-                            <i class="fas fa-sign-out-alt"></i> Odhlásit se
-                        </button>
-                    </form>
-                </li>
-            </ul>
         </li>
     </ul>
 </div>
