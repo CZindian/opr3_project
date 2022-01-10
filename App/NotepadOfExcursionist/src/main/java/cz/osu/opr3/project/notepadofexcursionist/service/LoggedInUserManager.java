@@ -135,7 +135,7 @@ public class LoggedInUserManager {
     }
 
     public static boolean isIsClientLoggedIn() {
-        return userData != null && tripData == null && isClientLoggedIn;
+        return userData != null && tripData != null && isClientLoggedIn;
     }
 
 }

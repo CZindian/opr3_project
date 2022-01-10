@@ -1,7 +1,7 @@
 <%@ page import="cz.osu.opr3.project.notepadofexcursionist.utils.Constants" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<form class="trip_form" action="NewNoteServlet" method="post" id="new_note">
+<form class="trip_form" action="NewNoteServlet" method="post" id="new_note" enctype="multipart/form-data">
     <h2>Můj nový výlet</h2>
     <div class="form-group row align-items-center my-3">
         <label for="heading" class="col-sm-4 col-form-label">Název pro výlet</label>
@@ -60,9 +60,9 @@
                         <i class="far fa-images"></i>
                     </span>
                 </div>
-                <input type="file" class="file" id="picture" name="picture" data-show-preview="true">
+                <input type="file" class="file" id="picture" name="picture" data-show-preview="true" accept="image/x-png,image/gif,image/jpeg">
                 <div class="img_div">
-
+                    <%--Uploaded image--%>
                 </div>
             </div>
         </div>

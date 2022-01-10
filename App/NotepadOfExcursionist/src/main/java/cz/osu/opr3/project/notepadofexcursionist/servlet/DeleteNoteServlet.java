@@ -25,10 +25,11 @@ public class DeleteNoteServlet extends HttpServlet {
             int tripId = Integer.parseInt(request.getParameter("tripIdDelete"));
             DBService.deleteTrip(tripId);
             updateUsersClientData();
+            response.sendRedirect("page_main.jsp");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        response.sendRedirect("page_main.jsp");
+
 
     }
 
