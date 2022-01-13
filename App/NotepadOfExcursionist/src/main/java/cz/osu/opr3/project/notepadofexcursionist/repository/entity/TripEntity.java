@@ -4,21 +4,27 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+import static cz.osu.opr3.project.notepadofexcursionist.utils.Constants.DATE_FORMAT_PATTERN;
+import static cz.osu.opr3.project.notepadofexcursionist.utils.Constants.DATE_FORMAT_PATTERN_DEFAULT;
+import static cz.osu.opr3.project.notepadofexcursionist.utils.Validator.formatDate;
 
 @Entity
 @Table(name = "TRIP", schema = "PUBLIC")
 @Getter
 @Setter
-public class TripEntity {
+public class TripEntity implements Comparable<TripEntity> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "TRIP_ID")
-    private int tripID;
+    private int tripId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId")
-    private UserEntity userEntity;
+    @Basic
+    @Column(name = "USER_ID")
+    private int userId;
 
     @Basic
     @Column(name = "TRIP_TITLE")
@@ -41,10 +47,6 @@ public class TripEntity {
     private String tripDistance;
 
     @Basic
-    @Column(name = "TRIP_GPX_DATA")
-    private String tripGpxData;
-
-    @Basic
     @Column(name = "TRIP_NOTES")
     private String tripNotes;
 
@@ -54,24 +56,51 @@ public class TripEntity {
 
     @Basic
     @Column(name = "TRIP_PICTURES")
-    private String tripPictures;
+    private String tripPicture;
 
     public TripEntity() {
     }
 
-    public TripEntity(UserEntity userEntity, String tripTitle, String tripCategory,
-                      String tripDate, String tripTime, String tripDistance, String tripGpxData,
-                      String tripNotes, String tripPlaces, String tripPictures) {
+    public TripEntity(int userId, String tripTitle, String tripCategory,
+                      String tripDate, String tripTime, String tripDistance,
+                      String tripNotes, String tripPlaces, String tripPicture) {
 
-        this.userEntity = userEntity;
+        this.userId = userId;
         this.tripTitle = tripTitle;
         this.tripCategory = tripCategory;
-        this.tripDate = tripDate;
+        this.tripDate = formatDate(tripDate, DATE_FORMAT_PATTERN_DEFAULT, DATE_FORMAT_PATTERN);
         this.tripTime = tripTime;
-        this.tripDistance = tripDistance;
-        this.tripGpxData = tripGpxData;
+        this.tripDistance = tripDistance.replace(",", ".");
         this.tripNotes = tripNotes;
         this.tripPlaces = tripPlaces;
-        this.tripPictures = tripPictures;
+        this.tripPicture = tripPicture;
     }
+
+    public TripEntity(int tripId, int userId, String tripTitle, String tripCategory,
+                      String tripDate, String tripTime, String tripDistance,
+                      String tripNotes, String tripPlaces, String tripPicture) {
+
+        this.tripId = tripId;
+        this.userId = userId;
+        this.tripTitle = tripTitle;
+        this.tripCategory = tripCategory;
+        this.tripDate = formatDate(tripDate, DATE_FORMAT_PATTERN_DEFAULT, DATE_FORMAT_PATTERN);
+        this.tripTime = tripTime;
+        this.tripDistance = tripDistance.replace(",", ".");;
+        this.tripNotes = tripNotes;
+        this.tripPlaces = tripPlaces;
+        this.tripPicture = tripPicture;
+    }
+
+    /*
+     * compareTo() programmed to show results from the most new one
+     */
+    @Override
+    public int compareTo(TripEntity tripEntity) {
+        LocalDate inputDate = LocalDate.parse(tripEntity.getTripDate(), DateTimeFormatter.ofPattern(DATE_FORMAT_PATTERN));
+        LocalDate currentDate = LocalDate.parse(this.getTripDate(), DateTimeFormatter.ofPattern(DATE_FORMAT_PATTERN));
+        int ret = inputDate.compareTo(currentDate);
+        return ret;
+    }
+
 }

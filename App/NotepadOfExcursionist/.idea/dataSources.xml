@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="excursionist_note" uuid="26889655-1ab4-4f05-b4fb-62b50facae8f">
+    <data-source source="LOCAL" name="notepad data" uuid="6b5e1be3-e56a-416e-bec1-59d78db5d44c">
       <driver-ref>h2.unified</driver-ref>
       <synchronize>true</synchronize>
       <configured-by-url>true</configured-by-url>
