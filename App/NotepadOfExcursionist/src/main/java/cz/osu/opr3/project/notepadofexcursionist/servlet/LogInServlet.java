@@ -50,6 +50,7 @@ public class LogInServlet extends HttpServlet {
     private void setSessionFor(String userEmail, HttpServletRequest request) {
         HttpSession session = request.getSession();
         session.setAttribute("user_email", userEmail);
+
     }
 
 }

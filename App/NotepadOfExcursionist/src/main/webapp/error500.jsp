@@ -19,9 +19,9 @@
     let i = 0, data = "", text = error.getAttribute("data-text");
 
     let typing = setInterval(() => {
-        if(i == text.length){
+        if (i == text.length) {
             clearInterval(typing);
-        }else{
+        } else {
             data += text[i];
             document.querySelector(".error-500").setAttribute("data-text", data);
             i++;

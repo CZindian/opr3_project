@@ -15,7 +15,7 @@ import java.util.List;
 public class DeleteNoteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        response.sendRedirect("page_main.jsp");
     }
 
     @Override
@@ -23,13 +23,15 @@ public class DeleteNoteServlet extends HttpServlet {
 
         try {
             int tripId = Integer.parseInt(request.getParameter("tripIdDelete"));
+
             DBService.deleteTrip(tripId);
             updateUsersClientData();
             response.sendRedirect("page_main.jsp");
+
         } catch (Exception e) {
+            response.sendRedirect("page_main.jsp");
             e.printStackTrace();
         }
-
 
     }
 
@@ -37,6 +39,7 @@ public class DeleteNoteServlet extends HttpServlet {
         UserEntity userEntity = LoggedInUserManager.getUserData();
         List<TripEntity> trips = DBService.getUsersTrips(userEntity.getUserId());
         LoggedInUserManager.setTripData(trips);
+
     }
 
 }

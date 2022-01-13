@@ -9,7 +9,6 @@ public class Base64Provider {
 
     public static String getBase64Img(Part picturePart) throws IOException {
         StringBuilder sbBase64 = new StringBuilder();
-
         InputStream pictureContent = picturePart.getInputStream();
         byte[] byteContent = pictureContent.readAllBytes();
 
@@ -24,6 +23,7 @@ public class Base64Provider {
                     append(
                             DatatypeConverter.printBase64Binary(byteContent)
                     );
+
         return sbBase64.toString();
     }
 

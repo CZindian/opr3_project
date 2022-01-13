@@ -1,7 +1,7 @@
 <%@ page import="cz.osu.opr3.project.notepadofexcursionist.service.LoggedInUserManager" %>
 <%@ page import="cz.osu.opr3.project.notepadofexcursionist.utils.Constants" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
 <html lang="cs">

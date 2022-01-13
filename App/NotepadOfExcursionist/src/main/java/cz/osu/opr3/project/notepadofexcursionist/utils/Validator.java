@@ -12,6 +12,7 @@ public class Validator {
         if (tripData != null)
             return !tripData.isEmpty();
         else return false;
+
     }
 
     public static String reformatTripValue(String tripCategory) {
@@ -20,6 +21,7 @@ public class Validator {
         String ret = tripCategory.toLowerCase().trim();
         ret = ret.replace("\\W", "").         // remove whitespaces between words
                 replace("\\-", "_");        // & remove '-' and replace by '_'
+
         return ret;
     }
 
@@ -33,6 +35,7 @@ public class Validator {
     public static String reformatTripCategory(String tripCategory) {
         String ret = tripCategory.replace("_", " ");
         ret = getStringWithCapital(ret);
+
         return ret;
     }
 
@@ -47,6 +50,7 @@ public class Validator {
     public static String formatDate(String tripDate, String fromPattern, String toPattern) {
         LocalDate ldt = LocalDate.parse(tripDate, DateTimeFormatter.ofPattern(fromPattern));
         String ret = ldt.format(DateTimeFormatter.ofPattern(toPattern));
+
         return ret;
     }
 

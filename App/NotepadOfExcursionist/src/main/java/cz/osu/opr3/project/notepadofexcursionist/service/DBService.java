@@ -20,11 +20,13 @@ public class DBService {
                 if (userEntity.getUserEmail().equals(email) &&
                         userEntity.getUserPassword().equals(password))
                     return userEntity;
+
             throw new IllegalArgumentException("Password does not match!");
 
         } catch (Exception e) {
             throw new IllegalArgumentException("User could not be found!");
         }
+
     }
 
     public static List<TripEntity> getUsersTrips(int userId) {
@@ -35,8 +37,8 @@ public class DBService {
             for (TripEntity usersTrip : trips)
                 if (usersTrip.getUserId() == userId)
                     usersTrips.add(usersTrip);
-
         }
+
         return usersTrips;
     }
 
@@ -49,21 +51,19 @@ public class DBService {
         return ret;
     }
 
-    public static void updateTripEntity(TripEntity tripEntity) {
-        new TripDBRepository().update(tripEntity);
-    }
-
     public static void saveNewTrip(
             String title, String category, String date, String time,
             String distance, String notes, String places, String picture,
             UserEntity loggedInUser
     ) {
+
         TripEntity tripEntity = new TripEntity(
                 loggedInUser.getUserId(),
                 title, category, date, time,
                 distance, notes, places, picture
         );
         new TripDBRepository().create(tripEntity);
+
     }
 
 }

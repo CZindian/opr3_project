@@ -24,5 +24,7 @@ public class LogOutServlet extends HttpServlet {
         } catch (Exception e) {
             response.sendRedirect(request.getRequestURI());
         }
+
     }
+
 }

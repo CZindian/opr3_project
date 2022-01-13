@@ -1,12 +1,10 @@
 package cz.osu.opr3.project.notepadofexcursionist.repository;
 
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity;
-import cz.osu.opr3.project.notepadofexcursionist.repository.entity.UserEntity;
 import cz.osu.opr3.project.notepadofexcursionist.repository.utils.DBException;
 import cz.osu.opr3.project.notepadofexcursionist.utils.Constants;
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaDelete;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -84,6 +82,7 @@ public class TripDBRepository {
         TripEntity ret;
         try {
             ret = typedQuery.getSingleResult();
+
         } catch (Exception e) {
             throw new DBException(
                     "Failed to find-by-id result of trip with id " + tripId + " \nMessage: " + e.getMessage(), e
@@ -100,6 +99,7 @@ public class TripDBRepository {
             TripEntity tripEntity = findById(tripId);
             entityManager.remove(tripEntity);
             entityManager.getTransaction().commit();
+
         } catch (Exception e) {
             throw new DBException("Failed to delete trip with id '" + tripId + "'", e);
         }
@@ -112,6 +112,7 @@ public class TripDBRepository {
             entityManager.getTransaction().begin();
             entityManager.refresh(tripEntity);
             entityManager.getTransaction().commit();
+
         } catch (Exception e) {
             throw new DBException("Failed to update trip with id '" + tripEntity.getTripId() + "' and userId '" + tripEntity.getUserId() + "'", e);
         }

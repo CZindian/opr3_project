@@ -10,7 +10,6 @@ public class Constants {
     public static final String TIME_FORMAT_PATTERN = "h:mm:ss";
     public static final String DEFAULT_USER_PICTURE_BASE64_STRING = getDefaultUserPicture();
     public static final String TRIP_PLACE_STRING_SEPARATOR = ",";
-    public static final String TRIP_PICTURE_BASE_SEPARATOR = "@star.*@end";
     //TODO change pass pattern to -> ^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,16}$
     public static final String VALID_PASSWORD_PATTERN = "^[a-zA-Z]$";
     public static final String VALID_EMAIL_PATTERN = "^[a-zA-Z0-9.]{1,64}@[a-zA-Z]{1,20}.[a-zA-Z0-9]{2,5}$";

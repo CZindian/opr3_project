@@ -1,6 +1,5 @@
 package cz.osu.opr3.project.notepadofexcursionist.servlet;
 
-import cz.osu.opr3.project.notepadofexcursionist.repository.TripDBRepository;
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity;
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.UserEntity;
 import cz.osu.opr3.project.notepadofexcursionist.service.Base64Provider;
@@ -41,13 +40,12 @@ public class ProcessUpdateServlet extends HttpServlet {
         UserEntity loggedInUser = LoggedInUserManager.getUserData();
 
         try {
-            DBService.deleteTrip(tripToUpdateId);
-            DBService.saveNewTrip(
-                    title, reformatTripCategory(category), date, time,
-                    distance, notes, places, base64String,
-                    loggedInUser
+            updateTripEntity(
+                    title, category, date, time, distance, notes, places,
+                    base64String, tripToUpdateId, loggedInUser
             );
             updateLoggedInUser(loggedInUser);
+            LoggedInUserManager.clearTripEntityToUpdate();
 
             response.sendRedirect("page_main.jsp");
         } catch (Exception e) {
@@ -57,16 +55,34 @@ public class ProcessUpdateServlet extends HttpServlet {
 
     }
 
+    private void updateTripEntity(
+            String title, String category, String date, String time,
+            String distance, String notes, String places, String base64String,
+            int tripToUpdateId, UserEntity loggedInUser) {
+
+        DBService.deleteTrip(tripToUpdateId);
+        DBService.saveNewTrip(
+                title, reformatTripCategory(category), date, time,
+                distance, notes, places, base64String,
+                loggedInUser
+        );
+
+    }
+
     private String getBase64ImageString(Part picturePart) throws IOException {
         String base64;
 
         String base64ImgString = Base64Provider.getBase64Img(picturePart);
-        if (isTripToUpdatePictureEmpty())
-            base64 = "";
-        else if (!base64ImgString.isEmpty())
-            base64 = base64ImgString;
+        String originalBase64 = LoggedInUserManager.getTripEntityToUpdate().getTripPicture();
+        if (!base64ImgString.equals(originalBase64))
+            if (!base64ImgString.isEmpty())
+                base64 = base64ImgString;
+            else if (!originalBase64.isEmpty())
+                base64 = originalBase64;
+            else
+                base64 = "";
         else
-            base64 = LoggedInUserManager.getTripEntityToUpdate().getTripPicture();
+            base64 = originalBase64;
 
         return base64;
     }
