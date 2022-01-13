@@ -79,7 +79,7 @@
                 </div>
                 <input type="file" class="file" id="picture" name="picture" data-show-preview="true"
                        accept="image/x-png,image/gif,image/jpeg">
-                <div class="img_div">
+                <div id="img_div">
                     <%--Uploaded image--%>
                     <c:if test="<%=!trip.getTripPicture().isEmpty()%>">
                         "<img id="trip_img" src="<%=trip.getTripPicture()%>"

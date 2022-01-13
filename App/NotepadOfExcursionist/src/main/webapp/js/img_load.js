@@ -1,4 +1,4 @@
-const carousel = document.querySelector(".img_div");
+const carousel = document.getElementById("img_div");
 const selectedImgInput = document.getElementById("picture");
 
 selectedImgInput.onchange = evt => {

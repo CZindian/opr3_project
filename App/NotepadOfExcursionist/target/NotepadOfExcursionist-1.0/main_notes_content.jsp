@@ -2,8 +2,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity" %>
 <%@ page import="java.util.Collections" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <c:if test="<%=LoggedInUserManager.hasTrips()%>">
     <%
@@ -49,7 +49,7 @@
                                 <i class="fas fa-map-marked-alt"></i>
                             </span>
                         </div>
-                        <div class="text-center">
+                        <div>
                             <ul class="list-group">
                                 <%
                                     List<String> visitedPlaces = LoggedInUserManager.getListOfTripPlaces(i);
@@ -76,7 +76,7 @@
                                 String base64 = LoggedInUserManager.getTripPicture(i);
                                 if (!base64.trim().isEmpty()) {
                             %>
-                            <div class="img_div">
+                            <div id="img_div">
                                 <img id="trip_img" src="<%=base64%>"
                                      alt="výlet <%=trips.get(i).getTripTitle()%>, <%=trips.get(i).getTripCategory()%>, <%=trips.get(i).getTripDate()%>">
                             </div>

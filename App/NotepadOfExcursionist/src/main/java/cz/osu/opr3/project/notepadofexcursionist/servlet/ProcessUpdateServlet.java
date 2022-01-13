@@ -73,12 +73,16 @@ public class ProcessUpdateServlet extends HttpServlet {
         String base64;
 
         String base64ImgString = Base64Provider.getBase64Img(picturePart);
-        if (isTripToUpdatePictureEmpty())
-            base64 = "";
-        else if (!base64ImgString.isEmpty())
-            base64 = base64ImgString;
+        String originalBase64 = LoggedInUserManager.getTripEntityToUpdate().getTripPicture();
+        if (!base64ImgString.equals(originalBase64))
+            if (!base64ImgString.isEmpty())
+                base64 = base64ImgString;
+            else if (!originalBase64.isEmpty())
+                base64 = originalBase64;
+            else
+                base64 = "";
         else
-            base64 = LoggedInUserManager.getTripEntityToUpdate().getTripPicture();
+            base64 = originalBase64;
 
         return base64;
     }

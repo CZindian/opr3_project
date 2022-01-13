@@ -1,4 +1,3 @@
-<%@ page import="cz.osu.opr3.project.notepadofexcursionist.utils.Constants" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <form class="trip_form" action="NewNoteServlet" method="post" id="new_note" enctype="multipart/form-data">
@@ -60,8 +59,9 @@
                         <i class="far fa-images"></i>
                     </span>
                 </div>
-                <input type="file" class="file" id="picture" name="picture" data-show-preview="true" accept="image/x-png,image/gif,image/jpeg">
-                <div class="img_div">
+                <input type="file" class="file" id="picture" name="picture" data-show-preview="true"
+                       accept="image/x-png,image/gif,image/jpeg">
+                <div id="img_div">
                     <%--Uploaded image--%>
                 </div>
             </div>

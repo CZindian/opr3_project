@@ -76,7 +76,7 @@
                                 String base64 = LoggedInUserManager.getTripPicture(i);
                                 if (!base64.trim().isEmpty()) {
                             %>
-                            <div class="img_div">
+                            <div id="img_div">
                                 <img id="trip_img" src="<%=base64%>"
                                      alt="výlet <%=trips.get(i).getTripTitle()%>, <%=trips.get(i).getTripCategory()%>, <%=trips.get(i).getTripDate()%>">
                             </div>

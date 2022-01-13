@@ -3,8 +3,8 @@
 <%@ page import="cz.osu.opr3.project.notepadofexcursionist.utils.Validator" %>
 <%@ page import="static cz.osu.opr3.project.notepadofexcursionist.utils.Constants.DATE_FORMAT_PATTERN" %>
 <%@ page import="static cz.osu.opr3.project.notepadofexcursionist.utils.Constants.DATE_FORMAT_PATTERN_DEFAULT" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
     TripEntity trip = LoggedInUserManager.getTripEntityToUpdate();
@@ -79,7 +79,7 @@
                 </div>
                 <input type="file" class="file" id="picture" name="picture" data-show-preview="true"
                        accept="image/x-png,image/gif,image/jpeg">
-                <div class="img_div">
+                <div id="img_div">
                     <%--Uploaded image--%>
                     <c:if test="<%=!trip.getTripPicture().isEmpty()%>">
                         "<img id="trip_img" src="<%=trip.getTripPicture()%>"
