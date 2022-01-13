@@ -43,4 +43,10 @@ public class DBService {
     public static void deleteTrip(int tripId) {
         new TripDBRepository().delete(tripId);
     }
+
+    public static TripEntity getTripById(int tripId) {
+        TripEntity ret = new TripDBRepository().findById(tripId);
+        return ret;
+    }
+
 }

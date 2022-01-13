@@ -15,6 +15,7 @@ public class LoggedInUserManager {
     private static boolean isClientLoggedIn = false;
     private static boolean isErrorRaised = false;
     private static String errorValue;
+    private static TripEntity tripEntityToUpdate;
     private static UserEntity userData;
     private static List<TripEntity> tripData;
 
@@ -48,6 +49,14 @@ public class LoggedInUserManager {
 
     public static void setIsClientLoggedIn(boolean isClientLoggedIn) {
         LoggedInUserManager.isClientLoggedIn = isClientLoggedIn;
+    }
+
+    public static void setTripEntityToUpdate(TripEntity tripEntityToUpdate) {
+        LoggedInUserManager.tripEntityToUpdate = tripEntityToUpdate;
+    }
+
+    public static TripEntity getTripEntityToUpdate() {
+        return tripEntityToUpdate;
     }
 
     public static boolean isSetProfilePicture() {

@@ -155,7 +155,7 @@
             </div>
             <div class="col-md-6 text-center">
                 <form action="UpdateNoteServlet" method="post">
-                    <input type="hidden" value="<%=trips.get(i).getTripId()%>" name="tripId">
+                    <input type="hidden" value="<%=trips.get(i).getTripId()%>" name="tripIdUpdate">
                     <button type="submit" class="btn btn-info"><i class="far fa-edit"></i> Upravit</button>
                 </form>
             </div>
