@@ -1,16 +1,21 @@
 <%@ page import="cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity" %>
 <%@ page import="cz.osu.opr3.project.notepadofexcursionist.service.LoggedInUserManager" %>
 <%@ page import="cz.osu.opr3.project.notepadofexcursionist.utils.Validator" %>
+<%@ page import="static cz.osu.opr3.project.notepadofexcursionist.utils.Constants.DATE_FORMAT_PATTERN" %>
+<%@ page import="static cz.osu.opr3.project.notepadofexcursionist.utils.Constants.DATE_FORMAT_PATTERN_DEFAULT" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%
     TripEntity trip = LoggedInUserManager.getTripEntityToUpdate();
-    String tripTypeValue = Validator.reformat(
+    String tripTypeValue = Validator.reformatTripValue(
             trip.getTripCategory()
     );
+    String tripDate = Validator.formatDate(
+            trip.getTripDate(), DATE_FORMAT_PATTERN, DATE_FORMAT_PATTERN_DEFAULT
+    );
 %>
-<form class="trip_form" action="UpdateNoteServlet" method="post" id="new_note" enctype="multipart/form-data">
+<form class="trip_form" action="ProcessUpdateServlet" method="post" id="new_note" enctype="multipart/form-data">
     <h2>Upravit výlet</h2>
     <div class="form-group row align-items-center my-3">
         <label for="heading" class="col-sm-4 col-form-label">Název pro výlet</label>
@@ -94,7 +99,7 @@
                     </span>
                 </div>
                 <%-- //TODO trip date in input --%>
-                <input type="date" class="form-control" id="date" name="date" value="<%=trip.getTripDate()%>" required>
+                <input type="date" class="form-control" id="date" name="date" value="<%=tripDate%>" required>
             </div>
         </div>
     </div>

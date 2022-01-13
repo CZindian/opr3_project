@@ -1,5 +1,6 @@
 package cz.osu.opr3.project.notepadofexcursionist.repository.entity;
 
+import cz.osu.opr3.project.notepadofexcursionist.utils.Validator;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +10,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import static cz.osu.opr3.project.notepadofexcursionist.utils.Constants.DATE_FORMAT_PATTERN;
+import static cz.osu.opr3.project.notepadofexcursionist.utils.Constants.DATE_FORMAT_PATTERN_DEFAULT;
+import static cz.osu.opr3.project.notepadofexcursionist.utils.Validator.formatDate;
 
 @Entity
 @Table(name = "TRIP", schema = "PUBLIC")
@@ -70,7 +73,7 @@ public class TripEntity implements Comparable<TripEntity> {
         this.userId = userId;
         this.tripTitle = tripTitle;
         this.tripCategory = tripCategory;
-        this.tripDate = formatDate(tripDate);
+        this.tripDate = formatDate(tripDate, DATE_FORMAT_PATTERN_DEFAULT, DATE_FORMAT_PATTERN);
         this.tripTime = tripTime;
         this.tripDistance = tripDistance;
         this.tripNotes = tripNotes;
@@ -78,10 +81,20 @@ public class TripEntity implements Comparable<TripEntity> {
         this.tripPicture = tripPicture;
     }
 
-    private String formatDate(String tripDate) {
-        LocalDate ldt = LocalDate.parse(tripDate, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        String ret = ldt.format(DateTimeFormatter.ofPattern(DATE_FORMAT_PATTERN));
-        return ret;
+    public TripEntity(int tripId, int userId, String tripTitle, String tripCategory,
+                      String tripDate, String tripTime, String tripDistance,
+                      String tripNotes, String tripPlaces, String tripPicture) {
+
+        this.tripId = tripId;
+        this.userId = userId;
+        this.tripTitle = tripTitle;
+        this.tripCategory = tripCategory;
+        this.tripDate = formatDate(tripDate, DATE_FORMAT_PATTERN_DEFAULT, DATE_FORMAT_PATTERN);
+        this.tripTime = tripTime;
+        this.tripDistance = tripDistance;
+        this.tripNotes = tripNotes;
+        this.tripPlaces = tripPlaces;
+        this.tripPicture = tripPicture;
     }
 
     /*

@@ -49,4 +49,21 @@ public class DBService {
         return ret;
     }
 
+    public static void updateTripEntity(TripEntity tripEntity) {
+        new TripDBRepository().update(tripEntity);
+    }
+
+    public static void saveNewTrip(
+            String title, String category, String date, String time,
+            String distance, String notes, String places, String picture,
+            UserEntity loggedInUser
+    ) {
+        TripEntity tripEntity = new TripEntity(
+                loggedInUser.getUserId(),
+                title, category, date, time,
+                distance, notes, places, picture
+        );
+        new TripDBRepository().create(tripEntity);
+    }
+
 }

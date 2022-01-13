@@ -168,6 +168,15 @@ footer {
     background: linear-gradient(305deg, rgba(0,0,0,0.60) 55%, rgba(255,255,255,0.60) 77%);
 }
 
+/* Update note */
+
+#update_note_body{
+    background-image: url("../img/sky.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
 /* Mobile */
 
 @media screen and (max-width: 500px) {

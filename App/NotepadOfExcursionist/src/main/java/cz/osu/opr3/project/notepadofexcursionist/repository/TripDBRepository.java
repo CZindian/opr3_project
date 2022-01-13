@@ -104,4 +104,17 @@ public class TripDBRepository {
             throw new DBException("Failed to delete trip with id '" + tripId + "'", e);
         }
     }
+
+    public void update(TripEntity tripEntity) {
+        initialize();
+
+        try{
+            entityManager.getTransaction().begin();
+            entityManager.refresh(tripEntity);
+            entityManager.getTransaction().commit();
+        } catch (Exception e) {
+            throw new DBException("Failed to update trip with id '" + tripEntity.getTripId() + "' and userId '" + tripEntity.getUserId() + "'", e);
+        }
+    }
+
 }

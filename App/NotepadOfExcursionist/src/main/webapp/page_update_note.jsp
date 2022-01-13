@@ -8,17 +8,20 @@
     <meta name="author" content="Dominik Sliwka"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Upravit výlet</title>
 </head>
-<body>
+<body id="update_note_body">
 
-<nav>
-    <div></div>
+<nav class="navbar navbar-expand-lg">
     <jsp:include page="main_navigation.jsp"/>
 </nav>
 
-<main>
+<main class="trip_area">
     <jsp:include page="update_note.jsp"/>
 </main>
 
@@ -35,5 +38,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/img_load.js"></script>
 </body>
 </html>

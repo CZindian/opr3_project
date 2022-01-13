@@ -3,6 +3,7 @@ package cz.osu.opr3.project.notepadofexcursionist.servlet;
 import cz.osu.opr3.project.notepadofexcursionist.repository.TripDBRepository;
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity;
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.UserEntity;
+import cz.osu.opr3.project.notepadofexcursionist.service.Base64Provider;
 import cz.osu.opr3.project.notepadofexcursionist.service.DBService;
 import cz.osu.opr3.project.notepadofexcursionist.service.LoggedInUserManager;
 
@@ -13,6 +14,8 @@ import javax.xml.bind.DatatypeConverter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+
+import static cz.osu.opr3.project.notepadofexcursionist.utils.Validator.reformatTripCategory;
 
 @WebServlet(name = "NewNoteServlet", value = "/NewNoteServlet")
 @MultipartConfig
@@ -35,13 +38,13 @@ public class NewNoteServlet extends HttpServlet {
         Part picturePart = request.getPart("picture");
         //endregion
 
-        StringBuilder sbBase64Img = getBase64Img(picturePart);
+        String base64String = Base64Provider.getBase64Img(picturePart);
         UserEntity loggedInUser = LoggedInUserManager.getUserData();
 
         try {
-            saveNewTrip(
-                    title, category, date, time,
-                    distance, notes, places, sbBase64Img.toString(),
+            DBService.saveNewTrip(
+                    title, reformatTripCategory(category), date, time,
+                    distance, notes, places, base64String,
                     loggedInUser
             );
             updateLoggedInUser(loggedInUser);
@@ -54,42 +57,9 @@ public class NewNoteServlet extends HttpServlet {
 
     }
 
-    private StringBuilder getBase64Img(Part picturePart) throws IOException {
-        StringBuilder sbBase64 = new StringBuilder();
-
-        InputStream pictureContent = picturePart.getInputStream();
-        byte[] byteContent = pictureContent.readAllBytes();
-
-        if (byteContent.length == 0)
-            sbBase64.append("");
-        else
-            sbBase64.append("data:").
-                    append(
-                            picturePart.getContentType()
-                    ).
-                    append(";base64,").
-                    append(
-                            DatatypeConverter.printBase64Binary(byteContent)
-                    );
-        return sbBase64;
-    }
-
     private void updateLoggedInUser(UserEntity loggedInUser) {
         List<TripEntity> usersTrips = DBService.getUsersTrips(loggedInUser.getUserId());
         LoggedInUserManager.setTripData(usersTrips);
-    }
-
-    private void saveNewTrip(
-            String title, String category, String date, String time,
-            String distance, String notes, String places, String picture,
-            UserEntity loggedInUser
-    ) {
-        TripEntity tripEntity = new TripEntity(
-                loggedInUser.getUserId(),
-                title, category, date, time,
-                distance, notes, places, picture
-        );
-        new TripDBRepository().create(tripEntity);
     }
 
 }
