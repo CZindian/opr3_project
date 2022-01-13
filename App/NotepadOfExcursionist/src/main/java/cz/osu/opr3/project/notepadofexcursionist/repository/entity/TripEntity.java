@@ -70,7 +70,7 @@ public class TripEntity implements Comparable<TripEntity> {
         this.tripCategory = tripCategory;
         this.tripDate = formatDate(tripDate, DATE_FORMAT_PATTERN_DEFAULT, DATE_FORMAT_PATTERN);
         this.tripTime = tripTime;
-        this.tripDistance = tripDistance;
+        this.tripDistance = tripDistance.replace(",", ".");
         this.tripNotes = tripNotes;
         this.tripPlaces = tripPlaces;
         this.tripPicture = tripPicture;
@@ -86,7 +86,7 @@ public class TripEntity implements Comparable<TripEntity> {
         this.tripCategory = tripCategory;
         this.tripDate = formatDate(tripDate, DATE_FORMAT_PATTERN_DEFAULT, DATE_FORMAT_PATTERN);
         this.tripTime = tripTime;
-        this.tripDistance = tripDistance;
+        this.tripDistance = tripDistance.replace(",", ".");;
         this.tripNotes = tripNotes;
         this.tripPlaces = tripPlaces;
         this.tripPicture = tripPicture;

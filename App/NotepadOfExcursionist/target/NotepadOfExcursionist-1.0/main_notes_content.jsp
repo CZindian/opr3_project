@@ -69,7 +69,7 @@
                         <div class="input-group">
                             <div class="input-group-prepend my-1">
                     <span class="input-group-text" id="inputGroupPrepend4">
-                        <i class="fas fa-heading"></i>
+                        <i class="fas fa-images"></i>
                     </span>
                             </div>
                             <%
@@ -135,7 +135,7 @@
                         <i class="fas fa-stopwatch"></i>
                     </span>
                             </div>
-                            <textarea class="form-control text-left" id="notes" disabled>
+                            <textarea  id="notes" disabled>
                         <%=trips.get(i).getTripNotes()%>
                     </textarea>
                         </div>

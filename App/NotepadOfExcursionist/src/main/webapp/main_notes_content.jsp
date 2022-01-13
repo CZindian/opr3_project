@@ -69,7 +69,7 @@
                         <div class="input-group">
                             <div class="input-group-prepend my-1">
                     <span class="input-group-text" id="inputGroupPrepend4">
-                        <i class="fas fa-heading"></i>
+                        <i class="fas fa-images"></i>
                     </span>
                             </div>
                             <%
