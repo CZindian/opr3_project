@@ -3,8 +3,8 @@
 <%@ page import="cz.osu.opr3.project.notepadofexcursionist.utils.Validator" %>
 <%@ page import="static cz.osu.opr3.project.notepadofexcursionist.utils.Constants.DATE_FORMAT_PATTERN" %>
 <%@ page import="static cz.osu.opr3.project.notepadofexcursionist.utils.Constants.DATE_FORMAT_PATTERN_DEFAULT" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
     TripEntity trip = LoggedInUserManager.getTripEntityToUpdate();

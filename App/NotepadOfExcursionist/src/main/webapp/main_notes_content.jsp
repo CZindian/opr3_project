@@ -2,8 +2,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity" %>
 <%@ page import="java.util.Collections" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <c:if test="<%=LoggedInUserManager.hasTrips()%>">
     <%

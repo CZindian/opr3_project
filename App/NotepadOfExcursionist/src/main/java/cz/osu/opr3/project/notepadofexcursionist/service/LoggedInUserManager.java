@@ -12,25 +12,33 @@ import static cz.osu.opr3.project.notepadofexcursionist.utils.Validator.isNotEmp
 
 public class LoggedInUserManager {
 
+    //region Attributes
     private static boolean isClientLoggedIn = false;
     private static boolean isErrorRaised = false;
-    private static String errorValue;
+    private static List<TripEntity> tripData;
     private static TripEntity tripEntityToUpdate;
     private static UserEntity userData;
-    private static List<TripEntity> tripData;
+    //endregion
 
     public static void initialize(UserEntity loggedInUserData, List<TripEntity> usersTripData) {
         LoggedInUserManager.userData = loggedInUserData;
         LoggedInUserManager.tripData = usersTripData;
         isClientLoggedIn = true;
+
     }
 
     public static void clearAllData() {
         setUserData(null);
         setUserData(null);
         setIsClientLoggedIn(false);
+
     }
 
+    public static void clearTripEntityToUpdate() {
+        tripEntityToUpdate = null;
+    }
+
+    //region Getters and Setters
     public static UserEntity getUserData() {
         return userData;
     }
@@ -71,16 +79,9 @@ public class LoggedInUserManager {
     public static void setIsErrorRaised(boolean isErrorRaised) {
         LoggedInUserManager.isErrorRaised = isErrorRaised;
     }
+    //endregion
 
-    public static String getErrorValue() {
-        return errorValue;
-    }
-
-    public static void setErrorValue(String errorValue) {
-        LoggedInUserManager.errorValue = errorValue;
-    }
-
-
+    //region Adjusted methods for jsp
     public static String getNameAndSurname() {
         isAssigned(userData);
         return userData.getUserName() + " " + userData.getUserSurname();
@@ -92,47 +93,29 @@ public class LoggedInUserManager {
     }
 
     public static List<String> getListOfTripPlaces(int index) {
-        //isAssigned(userData);
-
-/*        if (!hasTrips())
-            throw new NullPointerException("Current user has not any trips!");
-        else {
-            List<String> ret = new ArrayList<>();
-            String[] trips = userData.getTrips().get(index).getTripPlaces().split(Constants.TRIP_PLACE_STRING_SEPARATOR);
-            Collections.addAll(ret, trips);
-            return ret;
-        }*/
 
         if (isNotEmpty(tripData)) {
             List<String> ret = new ArrayList<>();
             String[] trips = tripData.get(index).getTripPlaces().split(Constants.TRIP_PLACE_STRING_SEPARATOR);
+
             Collections.addAll(ret, trips);
             return ret;
+
         } else
             throw new NullPointerException("Current user has not any trips!");
 
     }
 
     public static String getTripPicture(int index) {
-/*        isAssigned(userData);
-
-        if (userData.getTrips().get(index) == null)
-            throw new NullPointerException("Current user has not any trip pictures!");
-        else {
-            List<String> ret = new ArrayList<>();
-            String[] trips = userData.getTrips().get(index).getTripPictures().split(Constants.TRIP_PICTURE_BASE_SEPARATOR);
-            Collections.addAll(ret, trips);
-            return ret;
-        }*/
-
         if (isNotEmpty(tripData)) {
             String tripPicture = tripData.get(index).getTripPicture();
             return tripPicture;
 
         } else
             throw new NullPointerException("Current user has not any trips!");
-    }
 
+    }
+    //endregion
 
     private static void isAssigned(UserEntity currentUserDada) {
         if (currentUserDada.getUserProfilePicture() == null)

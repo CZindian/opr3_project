@@ -14,11 +14,13 @@ public class AddNoteButtonServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         try {
             response.sendRedirect("page_new_note.jsp");
         } catch (Exception e) {
             response.sendRedirect("page_main.jsp");
         }
+
     }
 
 }

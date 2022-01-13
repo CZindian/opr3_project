@@ -1,6 +1,5 @@
 package cz.osu.opr3.project.notepadofexcursionist.servlet;
 
-import cz.osu.opr3.project.notepadofexcursionist.repository.TripDBRepository;
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity;
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.UserEntity;
 import cz.osu.opr3.project.notepadofexcursionist.service.Base64Provider;
@@ -41,19 +40,32 @@ public class ProcessUpdateServlet extends HttpServlet {
         UserEntity loggedInUser = LoggedInUserManager.getUserData();
 
         try {
-            DBService.deleteTrip(tripToUpdateId);
-            DBService.saveNewTrip(
-                    title, reformatTripCategory(category), date, time,
-                    distance, notes, places, base64String,
-                    loggedInUser
+            updateTripEntity(
+                    title, category, date, time, distance, notes, places,
+                    base64String, tripToUpdateId, loggedInUser
             );
             updateLoggedInUser(loggedInUser);
+            LoggedInUserManager.clearTripEntityToUpdate();
 
             response.sendRedirect("page_main.jsp");
         } catch (Exception e) {
             response.sendRedirect("page_update_note.jsp");
             e.printStackTrace();
         }
+
+    }
+
+    private void updateTripEntity(
+            String title, String category, String date, String time,
+            String distance, String notes, String places, String base64String,
+            int tripToUpdateId, UserEntity loggedInUser) {
+
+        DBService.deleteTrip(tripToUpdateId);
+        DBService.saveNewTrip(
+                title, reformatTripCategory(category), date, time,
+                distance, notes, places, base64String,
+                loggedInUser
+        );
 
     }
 

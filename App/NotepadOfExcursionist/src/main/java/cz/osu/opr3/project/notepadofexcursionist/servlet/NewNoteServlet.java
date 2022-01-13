@@ -1,6 +1,5 @@
 package cz.osu.opr3.project.notepadofexcursionist.servlet;
 
-import cz.osu.opr3.project.notepadofexcursionist.repository.TripDBRepository;
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.TripEntity;
 import cz.osu.opr3.project.notepadofexcursionist.repository.entity.UserEntity;
 import cz.osu.opr3.project.notepadofexcursionist.service.Base64Provider;
@@ -10,9 +9,7 @@ import cz.osu.opr3.project.notepadofexcursionist.service.LoggedInUserManager;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
-import javax.xml.bind.DatatypeConverter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 import static cz.osu.opr3.project.notepadofexcursionist.utils.Validator.reformatTripCategory;
@@ -60,6 +57,7 @@ public class NewNoteServlet extends HttpServlet {
     private void updateLoggedInUser(UserEntity loggedInUser) {
         List<TripEntity> usersTrips = DBService.getUsersTrips(loggedInUser.getUserId());
         LoggedInUserManager.setTripData(usersTrips);
+
     }
 
 }

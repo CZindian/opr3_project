@@ -1,12 +1,10 @@
 package cz.osu.opr3.project.notepadofexcursionist.repository.entity;
 
-import cz.osu.opr3.project.notepadofexcursionist.utils.Validator;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import static cz.osu.opr3.project.notepadofexcursionist.utils.Constants.DATE_FORMAT_PATTERN;
@@ -15,9 +13,6 @@ import static cz.osu.opr3.project.notepadofexcursionist.utils.Validator.formatDa
 
 @Entity
 @Table(name = "TRIP", schema = "PUBLIC")
-@NamedQueries(
-        @NamedQuery(name = "delete", query = "DELETE FROM TripEntity tripEntity WHERE tripEntity.tripId = :id")
-)
 @Getter
 @Setter
 public class TripEntity implements Comparable<TripEntity> {
@@ -98,8 +93,8 @@ public class TripEntity implements Comparable<TripEntity> {
     }
 
     /*
-        * compareTo() programmed to show results from the most new one
-    */
+     * compareTo() programmed to show results from the most new one
+     */
     @Override
     public int compareTo(TripEntity tripEntity) {
         LocalDate inputDate = LocalDate.parse(tripEntity.getTripDate(), DateTimeFormatter.ofPattern(DATE_FORMAT_PATTERN));
